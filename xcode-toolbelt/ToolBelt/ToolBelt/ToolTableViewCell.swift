@@ -19,5 +19,6 @@ class ToolTableViewCell: UITableViewCell {
     @IBOutlet weak var toolListDescription: UILabel!
     
     
+    @IBOutlet weak var toolContactOwner: UIButton!
 
 }
