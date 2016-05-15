@@ -10,5 +10,6 @@ import UIKit
 
 class UserProfileController: UIViewController {
 
+    @IBOutlet weak var addEditStreetAddress: UIButton!
 
 }
