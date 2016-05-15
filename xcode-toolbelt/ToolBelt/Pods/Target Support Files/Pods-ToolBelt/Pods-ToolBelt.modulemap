@@ -1,0 +1,6 @@
+framework module Pods_ToolBelt {
+  umbrella header "Pods-ToolBelt-umbrella.h"
+
+  export *
+  module * { export * }
+}
