@@ -19,12 +19,12 @@ class testViewController: UIViewController {
         
     }
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     
-            loadUser()
+        loadUser()
     
-        }
+    }
     
     
         func loadUser() {
