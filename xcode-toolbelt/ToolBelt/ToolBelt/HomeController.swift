@@ -12,6 +12,7 @@ class HomeController: UIViewController {
     
     // UI Outlets
     
+    
     @IBOutlet weak var toolSearchBar: UISearchBar!
     
     
@@ -23,7 +24,7 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var myProfile: UIButton!
     
-
+    
 
 
 }

@@ -1,5 +1,5 @@
 //
-//  ToolTableViewController.swift
+//  MyToolTableViewController.swift
 //  ToolBelt
 //
 //  Created by Afaan on 5/15/16.
@@ -8,38 +8,22 @@
 
 import UIKit
 
-class ToolTableViewController: UITableViewController {
+
+class MyToolTableViewController: UITableViewController {
     
-    
-    // MARK - Outlets
-    
-    
-    @IBOutlet weak var toolListSearchBar: UISearchBar!
-    
-    
-    
-    // MARK - Ajax call for toolsearchbar
-    
-    
-    
-    
-    // MARK - Load sample tools
-    
-    
-    
-    var tools = [Tool]()
+    var mytools = [Tool]()
     
     // Table view cells are reused and should be dequeued using a cell identifier.
     
-
+    
     
     func loadSampleTools() {
-        let tool1 = Tool(title: "Power drill", description: "Portable power drill with bits. Very powerful and lightweight.")
-        let tool2 = Tool(title: "Table saw", description: "Stationary table saw in my garage. Safe and smooth.")
-        let tool3 = Tool(title: "Jack Hammer", description: "Poor-mans jack hammer. Not heavy duty but does the job.")
-        let tool4 = Tool(title: "Full toolkit", description: "No power tools, but my tookit has all hammers, nails, screwdrivers stc for everyday DIY jobs.")
+        let mytool1 = Tool(title: "Power drill", description: "Portable power drill with bits. Very powerful and lightweight.")
+        let mytool2 = Tool(title: "Table saw", description: "Stationary table saw in my garage. Safe and smooth.")
+        let mytool3 = Tool(title: "Jack Hammer", description: "Poor-mans jack hammer. Not heavy duty but does the job.")
+        let mytool4 = Tool(title: "Full toolkit", description: "No power tools, but my tookit has all hammers, nails, screwdrivers stc for everyday DIY jobs.")
         
-        tools += [tool1, tool2, tool3, tool4]
+        mytools += [mytool1, mytool2, mytool3, mytool4]
         
     }
     
@@ -56,20 +40,19 @@ class ToolTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tools.count
+        return mytools.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "ToolTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ToolTableViewCell
-        let tool = tools[indexPath.row]
+        let tool = mytools[indexPath.row]
         
         cell.toolListTitle.text = tool.title
         cell.toolListDescription.text = tool.description
         
         return cell
     }
-    
-    
+
     
     
 
