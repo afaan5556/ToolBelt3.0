@@ -25,13 +25,16 @@ class testViewController: UIViewController {
             let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
             Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/users/\(userid)") .responseJSON { response in
                 if let JSON = response.result.value {
-                    print("\(JSON)")
+                    print("\(JSON["first_name"])")
+                    self.firstName.text = JSON["first_name"] as? String
+                    
                 }
                 
             }
             
         }
     
+    @IBOutlet weak var firstName: UILabel!
     
     
     
