@@ -25,7 +25,6 @@
 		09D55A211CE7B81500EEE324 /* ToolBeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A201CE7B81500EEE324 /* ToolBeltTests.swift */; };
 		09D55A2C1CE7B81500EEE324 /* ToolBeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */; };
 		93AA4EF3B8F713E29701D0EF /* Pods_ToolBelt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */; };
-		BD7186801CE7F7B4003FEE74 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71867F1CE7F7B4003FEE74 /* Map.swift */; };
 		BD9105DE1CE7D24B0058165D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9105DC1CE7D24B0058165D /* FBSDKCoreKit.framework */; };
 		BD9105DF1CE7D24B0058165D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9105DD1CE7D24B0058165D /* FBSDKLoginKit.framework */; };
 		BD9105E51CE7D47B0058165D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9105E41CE7D47B0058165D /* ViewController.swift */; };
@@ -72,10 +71,10 @@
 		09D55A271CE7B81500EEE324 /* ToolBeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolBeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBeltUITests.swift; sourceTree = "<group>"; };
 		09D55A2D1CE7B81500EEE324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E523421CEA56A600000440 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3B08A1B1182E8A686452710B /* Pods-ToolBelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.release.xcconfig"; sourceTree = "<group>"; };
 		4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBelt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659C04E7478677E786AF5BF4 /* Pods-ToolBelt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.debug.xcconfig"; sourceTree = "<group>"; };
-		BD71867F1CE7F7B4003FEE74 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = ../Map.swift; sourceTree = "<group>"; };
 		BD9105DC1CE7D24B0058165D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BD9105DD1CE7D24B0058165D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BD9105E01CE7D29A0058165D /* ToolBelt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToolBelt-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -138,7 +137,6 @@
 				BD9105DC1CE7D24B0058165D /* FBSDKCoreKit.framework */,
 				BD9105DD1CE7D24B0058165D /* FBSDKLoginKit.framework */,
 				09D55A0B1CE7B81500EEE324 /* AppDelegate.swift */,
-				BD71867F1CE7F7B4003FEE74 /* Map.swift */,
 				BD9105E41CE7D47B0058165D /* ViewController.swift */,
 				09D55A0D1CE7B81500EEE324 /* HomeController.swift */,
 				09D55A0F1CE7B81500EEE324 /* Main.storyboard */,
@@ -190,6 +188,7 @@
 		B4E469C4993640B104C46837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09E523421CEA56A600000440 /* CoreLocation.framework */,
 				4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */,
 			);
 			name = Frameworks;
@@ -389,7 +388,6 @@
 				09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */,
 				09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */,
 				0983C2DC1CE9001E009D8011 /* ToolTableViewCell.swift in Sources */,
-				BD7186801CE7F7B4003FEE74 /* Map.swift in Sources */,
 				09A1BD571CE96C7100A4387F /* newAddEditAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 
 
@@ -20,7 +22,6 @@ class FlagUserFormController: UIViewController {
     @IBOutlet weak var flagCommentField: UITextField!
     
     
-    @IBOutlet weak var flagSubmitButton: UIButton!
     
 
 }
