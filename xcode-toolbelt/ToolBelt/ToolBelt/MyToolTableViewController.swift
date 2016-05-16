@@ -8,16 +8,11 @@
 
 import UIKit
 
-
 class MyToolTableViewController: UITableViewController {
-    
+
     var mytools = [Tool]()
     
-    // Table view cells are reused and should be dequeued using a cell identifier.
-    
-    
-    
-    func loadSampleTools() {
+    func loadMyTools() {
         let mytool1 = Tool(title: "Power drill", description: "Portable power drill with bits. Very powerful and lightweight.")
         let mytool2 = Tool(title: "Table saw", description: "Stationary table saw in my garage. Safe and smooth.")
         let mytool3 = Tool(title: "Jack Hammer", description: "Poor-mans jack hammer. Not heavy duty but does the job.")
@@ -32,7 +27,7 @@ class MyToolTableViewController: UITableViewController {
         
         
         // Load the sample data.
-        loadSampleTools()
+        loadMyTools()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,17 +38,15 @@ class MyToolTableViewController: UITableViewController {
         return mytools.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "ToolTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ToolTableViewCell
-        let tool = mytools[indexPath.row]
+        let cellIdentifier = "MyToolsTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MyToolsTableViewCell
+        let mytool = mytools[indexPath.row]
         
-        cell.toolListTitle.text = tool.title
-        cell.toolListDescription.text = tool.description
+        cell.myToolTitle.text = mytool.title
+        cell.myToolDescription.text = mytool.description
         
         return cell
     }
 
-    
-    
 
 }
