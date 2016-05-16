@@ -7,50 +7,50 @@
 //
 
 import UIKit
-
+import Alamofire
 
 
 class AddToolController: UIViewController {
-    
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        loadUser()
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadUser()
-        
-    }
-    
-    func loadUser() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
-    }
-    
-    func addTool() {
-        let title = addToolTitle.text
-        let description = addToolDescription.text
-        let newTool = Tool(title: title!, description: description!)
-        print(newTool)
-        
-    }
-
-    
-    
-    
-    
-    
-    // UI ELEMENTS - IBOutlets
-    
     
     @IBOutlet var addToolTitle: UITextField!
     
     
     @IBOutlet var addToolDescription: UITextField!
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+    
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    func addTool() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
+        
+        let title = String(addToolTitle.text!)
+        let description = String(addToolDescription.text!)
+        
+        Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users/\(userid)/tools", parameters: ["title": title, "description": description]) .responseJSON {response in
+            
+            if let responses = response.result.value {
+                print(responses)
+            }
+            
+        }
+        
+    }
+
+
+    
+    // UI ELEMENTS - IBOutlets
+    
+    
+
     
 
     @IBAction func addToolButton(sender: AnyObject) {
@@ -59,6 +59,4 @@ class AddToolController: UIViewController {
         
     }
     
-    
-
 }

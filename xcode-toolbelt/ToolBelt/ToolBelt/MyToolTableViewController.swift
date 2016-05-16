@@ -12,6 +12,21 @@ import Alamofire
 class MyToolTableViewController: UITableViewController {
 
     var mytools = [Tool]()
+    
+        override func viewDidAppear(animated: Bool) {
+            super.viewDidAppear(true)
+            loadMyTools()
+    
+        }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        loadMyTools()
+        
+        
+    }
+    
+
  
     
     func loadMyTools() {
@@ -41,12 +56,7 @@ class MyToolTableViewController: UITableViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadMyTools()
 
-        
-    }
     
 
 
