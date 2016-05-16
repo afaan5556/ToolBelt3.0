@@ -7,30 +7,50 @@
 //
 
 import UIKit
+import Alamofire
 
 class MyToolTableViewController: UITableViewController {
 
     var mytools = [Tool]()
+ 
     
     func loadMyTools() {
-        let mytool1 = Tool(title: "Power drill", description: "Portable power drill with bits. Very powerful and lightweight.")
-        let mytool2 = Tool(title: "Table saw", description: "Stationary table saw in my garage. Safe and smooth.")
-        let mytool3 = Tool(title: "Jack Hammer", description: "Poor-mans jack hammer. Not heavy duty but does the job.")
-        let mytool4 = Tool(title: "Full toolkit", description: "No power tools, but my tookit has all hammers, nails, screwdrivers stc for everyday DIY jobs.")
-        
-        mytools += [mytool1, mytool2, mytool3, mytool4]
-        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
+        Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/users/\(userid)/tools").responseJSON { response in
+            if let JSON = response.result.value {
+                for var i = 0; i < JSON.count; i++ {
+                    
+                    let title = (JSON[i]["title"] as? String)!
+                    
+                    var description: String
+                    
+                    if let des = JSON[i]["description"] as?  NSNull {
+                        description = ""
+                    } else {
+                        description = (JSON[i]["description"] as? String)!
+                    }
+                    
+                    let myTool = Tool(title: title, description: description)
+                    
+                    self.mytools += [myTool]
+                    
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Load the sample data.
         loadMyTools()
+
+        
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+
+
+     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
@@ -47,6 +67,5 @@ class MyToolTableViewController: UITableViewController {
         
         return cell
     }
-
 
 }
