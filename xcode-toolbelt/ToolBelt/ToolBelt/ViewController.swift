@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 
 
@@ -21,7 +21,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         return button
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loginButton)
@@ -31,11 +30,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         if let token = FBSDKAccessToken.currentAccessToken(){
             fetchProfile()
         }
-    
+        
     }
     
     func fetchProfile(){
         print("fetch profile")
+        
+        var email = ""
+        var first_name = ""
+        var last_name = ""
+        var image = ""
         
         let parameters = ["fields": "email, first_name, last_name, picture.type(large)"]
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
@@ -44,21 +48,26 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.performSegueWithIdentifier("mainMenu", sender: self)
             }
             
-            if error != nil{
-//                print(error)
-                return
-            }
+            email = (result["email"] as? String)!
+            first_name = (result["first_name"] as? String)!
+            last_name = (result["last_name"] as? String)!
+            image = (result["picture"]!!["data"]!!["url"] as? String)!
             
-            if let email = result["email"] as? String {
-//                print(email)
+            Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users", parameters: ["email": email, "first_name": first_name, "last_name": last_name, "image": image]).responseJSON { response in
+                if let JSON = response.result.value {
+                    print(JSON)
+                    let user_id = (JSON["user_id"] as! Int)
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(user_id, forKey: "toolBeltUserID")
+                    defaults.synchronize()
+                }
             }
-            
-            if let picture = result["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-//                print(url)
-            }
-            
-//            print(result)
         }
+    }
+    
+    func loadDefaults() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        print(defaults.objectForKey("toolBeltUserID") as! Int)
     }
     
     override func didReceiveMemoryWarning() {
