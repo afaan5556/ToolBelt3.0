@@ -19,12 +19,7 @@ class ToolTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     @IBOutlet weak var toolListSearchBar: UISearchBar!
     
-    
-    
-    // MARK - Ajax call for toolsearchbar
-    
-    
-    
+
     
     // MARK - Load sample tools
     
@@ -106,6 +101,8 @@ class ToolTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         // Load the sample data.
     }
+    
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

@@ -24,6 +24,8 @@
 		09D55A161CE7B81500EEE324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D55A141CE7B81500EEE324 /* LaunchScreen.storyboard */; };
 		09D55A211CE7B81500EEE324 /* ToolBeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A201CE7B81500EEE324 /* ToolBeltTests.swift */; };
 		09D55A2C1CE7B81500EEE324 /* ToolBeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */; };
+		09E523451CEA83A100000440 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E523441CEA83A100000440 /* ChatController.swift */; };
+		09E523471CEA894600000440 /* FlagUserReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E523461CEA894600000440 /* FlagUserReasonCell.swift */; };
 		93AA4EF3B8F713E29701D0EF /* Pods_ToolBelt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */; };
 		BD9105DE1CE7D24B0058165D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9105DC1CE7D24B0058165D /* FBSDKCoreKit.framework */; };
 		BD9105DF1CE7D24B0058165D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9105DD1CE7D24B0058165D /* FBSDKLoginKit.framework */; };
@@ -72,6 +74,8 @@
 		09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBeltUITests.swift; sourceTree = "<group>"; };
 		09D55A2D1CE7B81500EEE324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E523421CEA56A600000440 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		09E523441CEA83A100000440 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		09E523461CEA894600000440 /* FlagUserReasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagUserReasonCell.swift; sourceTree = "<group>"; };
 		3B08A1B1182E8A686452710B /* Pods-ToolBelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.release.xcconfig"; sourceTree = "<group>"; };
 		4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBelt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659C04E7478677E786AF5BF4 /* Pods-ToolBelt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				BD9105E41CE7D47B0058165D /* ViewController.swift */,
 				09D55A0D1CE7B81500EEE324 /* HomeController.swift */,
 				09D55A0F1CE7B81500EEE324 /* Main.storyboard */,
+				09E523461CEA894600000440 /* FlagUserReasonCell.swift */,
+				09E523441CEA83A100000440 /* ChatController.swift */,
 				09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */,
 				0942B94E1CE95B92003EEA78 /* testViewController.swift */,
 				09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */,
@@ -384,7 +390,9 @@
 				0983C2DE1CE9044B009D8011 /* ToolTableViewController.swift in Sources */,
 				0983C2DA1CE8FE03009D8011 /* Tool.swift in Sources */,
 				0983C2D81CE8FA48009D8011 /* AddToolController.swift in Sources */,
+				09E523471CEA894600000440 /* FlagUserReasonCell.swift in Sources */,
 				09D1BD851CE9402C0044BB94 /* ToolMapViewController.swift in Sources */,
+				09E523451CEA83A100000440 /* ChatController.swift in Sources */,
 				09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */,
 				09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */,
 				0983C2DC1CE9001E009D8011 /* ToolTableViewCell.swift in Sources */,
