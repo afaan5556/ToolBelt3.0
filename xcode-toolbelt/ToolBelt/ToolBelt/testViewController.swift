@@ -12,6 +12,13 @@ import Alamofire
 class testViewController: UIViewController {
     
     
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        loadUser()
+        
+    }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
     
@@ -27,6 +34,11 @@ class testViewController: UIViewController {
                 if let JSON = response.result.value {
                     print("\(JSON["first_name"])")
                     self.firstName.text = JSON["first_name"] as? String
+                    self.lastName.text = JSON["last_name"] as? String
+                    self.city.text = JSON["city"] as? String
+                    self.state.text = JSON["state"] as? String
+                    self.streetadd1.text = JSON["street_address_1"] as? String
+                    self.streetadd2.text = JSON["street_address_2"] as? String
                     
                 }
                 
@@ -36,6 +48,11 @@ class testViewController: UIViewController {
     
     @IBOutlet weak var firstName: UILabel!
     
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var lastName: UILabel!
     
+    @IBOutlet weak var state: UILabel!
+    @IBOutlet weak var streetadd2: UILabel!
     
+    @IBOutlet weak var streetadd1: UILabel!
 }
