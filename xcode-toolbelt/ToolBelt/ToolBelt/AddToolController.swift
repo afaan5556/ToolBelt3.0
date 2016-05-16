@@ -8,19 +8,56 @@
 
 import UIKit
 
+
+
 class AddToolController: UIViewController {
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        loadUser()
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadUser()
+        
+    }
+    
+    func loadUser() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
+    }
+    
+    func addTool() {
+        let title = addToolTitle.text
+        let description = addToolDescription.text
+        let newTool = Tool(title: title!, description: description!)
+        print(newTool)
+        
+    }
+
+    
+    
+    
+    
     
     // UI ELEMENTS - IBOutlets
     
     
-    @IBOutlet weak var addToolTitle: UITextField!
+    @IBOutlet var addToolTitle: UITextField!
     
     
-    @IBOutlet weak var addToolDescription: UITextField!
+    @IBOutlet var addToolDescription: UITextField!
     
-    
-    
-    @IBOutlet weak var addToolFormButton: UIButton!
+
+    @IBAction func addToolButton(sender: AnyObject) {
+        
+        addTool()
+        
+    }
     
     
 

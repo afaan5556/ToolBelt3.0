@@ -27,9 +27,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.center = view.center
         loginButton.delegate = self
         
-        if let token = FBSDKAccessToken.currentAccessToken(){
-            fetchProfile()
-        }
+        let token = FBSDKAccessToken.currentAccessToken()
+        fetchProfile()
+        self.performSegueWithIdentifier("mainMenu", sender: self)
+        
         
     }
     
@@ -45,25 +46,29 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
             
             if error == nil{
-                self.performSegueWithIdentifier("mainMenu", sender: self)
-            }
-            
-            email = (result["email"] as? String)!
-            first_name = (result["first_name"] as? String)!
-            last_name = (result["last_name"] as? String)!
-            image = (result["picture"]!!["data"]!!["url"] as? String)!
-            
-            Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users", parameters: ["email": email, "first_name": first_name, "last_name": last_name, "image": image]).responseJSON { response in
-                if let JSON = response.result.value {
-                    print(JSON)
-                    let user_id = (JSON["user_id"] as! Int)
-                    let defaults = NSUserDefaults.standardUserDefaults()
-                    defaults.setObject(user_id, forKey: "toolBeltUserID")
-                    defaults.synchronize()
+                print("hey")
+                email = (result["email"] as? String)!
+                first_name = (result["first_name"] as? String)!
+                last_name = (result["last_name"] as? String)!
+                image = (result["picture"]!!["data"]!!["url"] as? String)!
+                
+                let params = ["email": email, "first_name": first_name, "last_name": last_name, "image": image]
+                
+                Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users", parameters: params).responseJSON { response in
+//                Alamofire.request(.POST, "http://localhost:3000/users", parameters: params).responseJSON { response in
+                    if let JSON = response.result.value {
+                        print(JSON)
+                        let user_id = (JSON["user_id"] as! Int)
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        defaults.setObject(user_id, forKey: "toolBeltUserID")
+                        defaults.synchronize()
+                    }
                 }
+                
             }
+            
         }
-        print("hello")
+        
     }
     
     func loadDefaults() {
