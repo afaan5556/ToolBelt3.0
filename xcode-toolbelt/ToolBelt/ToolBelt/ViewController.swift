@@ -63,6 +63,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }
             }
         }
+        print("hello")
     }
     
     func loadDefaults() {

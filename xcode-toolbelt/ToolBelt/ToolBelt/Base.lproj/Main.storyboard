@@ -67,6 +67,9 @@
                                 <rect key="frame" x="248" y="221" width="105" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="My ToolBelt"/>
+                                <connections>
+                                    <segue destination="sLC-hU-IaW" kind="show" id="dNE-lc-4VW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lju-cg-GTx">
                                 <rect key="frame" x="238" y="282" width="124" height="36"/>
@@ -146,7 +149,7 @@
                                 <rect key="frame" x="0.0" y="136" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19t-id-uHF" id="a9a-cX-2aU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="JM7-Aa-tCA">
@@ -704,63 +707,61 @@
             </objects>
             <point key="canvasLocation" x="744" y="-291"/>
         </scene>
-        <!--My ToolBelt-->
-        <scene sceneID="dT9-Cs-wlH">
+        <!--My Tool Table View Controller-->
+        <scene sceneID="oMd-f2-xGM">
             <objects>
-                <tableViewController id="6eU-GX-yeg" customClass="MyToolTableViewController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="lwD-4c-S3d">
+                <tableViewController id="sLC-hU-IaW" customClass="MyToolTableViewController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="vbZ-vu-uiZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyToolTableViewCell" rowHeight="120" id="cvd-Oa-E5f" customClass="MyToolTableViewCell" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyToolsTableViewCell" rowHeight="120" id="dBR-X4-h62" customClass="MyToolsTableViewCell" customModule="ToolBelt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cvd-Oa-E5f" id="LWR-Uj-8kr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="L55-7u-igC">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-xe-B8X">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyTool Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-Ko-PER">
-                                            <rect key="frame" x="128" y="0.0" width="464" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cte-As-gXE">
+                                            <rect key="frame" x="128" y="8" width="464" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyTool Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38b-mR-Ys0">
-                                            <rect key="frame" x="128" y="29" width="250" height="45"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpE-aA-Lij">
+                                            <rect key="frame" x="128" y="40" width="240" height="45"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-jb-Qlz">
-                                            <rect key="frame" x="328" y="79" width="50" height="33"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trM-UI-YGb">
+                                            <rect key="frame" x="323" y="87" width="45" height="30"/>
                                             <state key="normal" title="Delete"/>
+                                            <connections>
+                                                <action selector="myToolDeleteButton:" destination="dBR-X4-h62" eventType="touchUpInside" id="vfo-0r-hn7"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="myToolDelete" destination="Ksh-jb-Qlz" id="j5w-CT-v3V"/>
-                                    <outlet property="myToolDescription" destination="38b-mR-Ys0" id="Ko3-49-Ai9"/>
-                                    <outlet property="myToolTitle" destination="tU5-Ko-PER" id="IQ9-8T-dyu"/>
+                                    <outlet property="myToolDescription" destination="tpE-aA-Lij" id="XEK-ss-Ipa"/>
+                                    <outlet property="myToolTitle" destination="Cte-As-gXE" id="djh-hS-dcB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="6eU-GX-yeg" id="u0P-kL-c1M"/>
-                            <outlet property="delegate" destination="6eU-GX-yeg" id="Jc0-e6-KUJ"/>
+                            <outlet property="dataSource" destination="sLC-hU-IaW" id="30B-c5-i9I"/>
+                            <outlet property="delegate" destination="sLC-hU-IaW" id="oEm-G0-xZg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My ToolBelt" id="JPM-4A-SKh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="p22-Yc-WG3"/>
-                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ywz-2n-Fnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45p-yB-Ykd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="440"/>
+            <point key="canvasLocation" x="744" y="445"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jT-3G-RRe">
@@ -804,6 +805,6 @@
         <image name="saw" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jIz-To-nwW"/>
+        <segue reference="pRA-DM-M3v"/>
     </inferredMetricsTieBreakers>
 </document>

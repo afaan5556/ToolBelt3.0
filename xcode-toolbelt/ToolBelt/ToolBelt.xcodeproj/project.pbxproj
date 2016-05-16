@@ -13,8 +13,8 @@
 		0983C2DC1CE9001E009D8011 /* ToolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983C2DB1CE9001E009D8011 /* ToolTableViewCell.swift */; };
 		0983C2DE1CE9044B009D8011 /* ToolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983C2DD1CE9044B009D8011 /* ToolTableViewController.swift */; };
 		09A1BD571CE96C7100A4387F /* newAddEditAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */; };
-		09D1BD7D1CE91DDE0044BB94 /* MyToolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1BD7C1CE91DDE0044BB94 /* MyToolTableViewCell.swift */; };
-		09D1BD7F1CE9214F0044BB94 /* MyToolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1BD7E1CE9214F0044BB94 /* MyToolTableViewController.swift */; };
+		09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A37FDE1CE977AF00A233D9 /* MyToolsTableViewCell.swift */; };
+		09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A37FE01CE9795300A233D9 /* MyToolTableViewController.swift */; };
 		09D1BD811CE9367F0044BB94 /* FlagUserFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1BD801CE9367F0044BB94 /* FlagUserFormController.swift */; };
 		09D1BD851CE9402C0044BB94 /* ToolMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */; };
 		09D55A0C1CE7B81500EEE324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A0B1CE7B81500EEE324 /* AppDelegate.swift */; };
@@ -24,8 +24,6 @@
 		09D55A161CE7B81500EEE324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D55A141CE7B81500EEE324 /* LaunchScreen.storyboard */; };
 		09D55A211CE7B81500EEE324 /* ToolBeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A201CE7B81500EEE324 /* ToolBeltTests.swift */; };
 		09D55A2C1CE7B81500EEE324 /* ToolBeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */; };
-		09D55A3A1CE7BC7400EEE324 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A391CE7BC7400EEE324 /* UserProfileController.swift */; };
-		09D55A3C1CE7C51300EEE324 /* AddEditAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A3B1CE7C51300EEE324 /* AddEditAddressController.swift */; };
 		93AA4EF3B8F713E29701D0EF /* Pods_ToolBelt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */; };
 		BD7186801CE7F7B4003FEE74 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71867F1CE7F7B4003FEE74 /* Map.swift */; };
 		BD9105DE1CE7D24B0058165D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9105DC1CE7D24B0058165D /* FBSDKCoreKit.framework */; };
@@ -57,8 +55,8 @@
 		0983C2DB1CE9001E009D8011 /* ToolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTableViewCell.swift; sourceTree = "<group>"; };
 		0983C2DD1CE9044B009D8011 /* ToolTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTableViewController.swift; sourceTree = "<group>"; };
 		09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newAddEditAddressViewController.swift; sourceTree = "<group>"; };
-		09D1BD7C1CE91DDE0044BB94 /* MyToolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolTableViewCell.swift; sourceTree = "<group>"; };
-		09D1BD7E1CE9214F0044BB94 /* MyToolTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolTableViewController.swift; sourceTree = "<group>"; };
+		09A37FDE1CE977AF00A233D9 /* MyToolsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolsTableViewCell.swift; sourceTree = "<group>"; };
+		09A37FE01CE9795300A233D9 /* MyToolTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolTableViewController.swift; sourceTree = "<group>"; };
 		09D1BD801CE9367F0044BB94 /* FlagUserFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagUserFormController.swift; sourceTree = "<group>"; };
 		09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolMapViewController.swift; sourceTree = "<group>"; };
 		09D55A081CE7B81500EEE324 /* ToolBelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolBelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +72,6 @@
 		09D55A271CE7B81500EEE324 /* ToolBeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolBeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D55A2B1CE7B81500EEE324 /* ToolBeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBeltUITests.swift; sourceTree = "<group>"; };
 		09D55A2D1CE7B81500EEE324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D55A391CE7BC7400EEE324 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
-		09D55A3B1CE7C51300EEE324 /* AddEditAddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditAddressController.swift; sourceTree = "<group>"; };
 		3B08A1B1182E8A686452710B /* Pods-ToolBelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.release.xcconfig"; sourceTree = "<group>"; };
 		4AA5D0DF93C9DA748A5733DF /* Pods_ToolBelt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBelt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659C04E7478677E786AF5BF4 /* Pods-ToolBelt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBelt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBelt/Pods-ToolBelt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,15 +141,11 @@
 				BD71867F1CE7F7B4003FEE74 /* Map.swift */,
 				BD9105E41CE7D47B0058165D /* ViewController.swift */,
 				09D55A0D1CE7B81500EEE324 /* HomeController.swift */,
-				09D55A391CE7BC7400EEE324 /* UserProfileController.swift */,
-				09D55A3B1CE7C51300EEE324 /* AddEditAddressController.swift */,
 				09D55A0F1CE7B81500EEE324 /* Main.storyboard */,
 				09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */,
 				0942B94E1CE95B92003EEA78 /* testViewController.swift */,
 				09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */,
 				09D1BD801CE9367F0044BB94 /* FlagUserFormController.swift */,
-				09D1BD7E1CE9214F0044BB94 /* MyToolTableViewController.swift */,
-				09D1BD7C1CE91DDE0044BB94 /* MyToolTableViewCell.swift */,
 				0983C2DD1CE9044B009D8011 /* ToolTableViewController.swift */,
 				0983C2DB1CE9001E009D8011 /* ToolTableViewCell.swift */,
 				0983C2D91CE8FE03009D8011 /* Tool.swift */,
@@ -162,6 +154,8 @@
 				09D55A141CE7B81500EEE324 /* LaunchScreen.storyboard */,
 				09D55A171CE7B81500EEE324 /* Info.plist */,
 				BD9105E01CE7D29A0058165D /* ToolBelt-Bridging-Header.h */,
+				09A37FDE1CE977AF00A233D9 /* MyToolsTableViewCell.swift */,
+				09A37FE01CE9795300A233D9 /* MyToolTableViewController.swift */,
 			);
 			path = ToolBelt;
 			sourceTree = "<group>";
@@ -392,13 +386,11 @@
 				0983C2DA1CE8FE03009D8011 /* Tool.swift in Sources */,
 				0983C2D81CE8FA48009D8011 /* AddToolController.swift in Sources */,
 				09D1BD851CE9402C0044BB94 /* ToolMapViewController.swift in Sources */,
-				09D1BD7D1CE91DDE0044BB94 /* MyToolTableViewCell.swift in Sources */,
+				09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */,
+				09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */,
 				0983C2DC1CE9001E009D8011 /* ToolTableViewCell.swift in Sources */,
-				09D55A3C1CE7C51300EEE324 /* AddEditAddressController.swift in Sources */,
-				09D1BD7F1CE9214F0044BB94 /* MyToolTableViewController.swift in Sources */,
 				BD7186801CE7F7B4003FEE74 /* Map.swift in Sources */,
 				09A1BD571CE96C7100A4387F /* newAddEditAddressViewController.swift in Sources */,
-				09D55A3A1CE7BC7400EEE324 /* UserProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
