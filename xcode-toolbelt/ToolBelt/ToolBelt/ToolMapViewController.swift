@@ -13,6 +13,9 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     var currentLat: CLLocationDegrees = 0.0
     var currentLong: CLLocationDegrees = 0.0
     
+    
+    
+    
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var map: MKMapView!

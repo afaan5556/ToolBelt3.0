@@ -98,7 +98,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="UbO-sY-JBl"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -110,6 +109,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Pc-Mtu">
                                 <rect key="frame" x="549" y="537" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendMessageButton:" destination="QIX-6Q-sUm" eventType="touchUpInside" id="Igh-pg-YyH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,6 +144,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Rate User" id="yy4-Pm-0GV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chatWindow" destination="WTd-oE-Zou" id="q0s-9U-Dny"/>
+                        <outlet property="textField" destination="Tw4-Ed-hmU" id="z0r-dY-AZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fke-K0-ffJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
