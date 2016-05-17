@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
+import MapKit
 
-class ToolTableViewController: UITableViewController {
+
+class ToolTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     
     // MARK - Outlets
@@ -16,40 +19,90 @@ class ToolTableViewController: UITableViewController {
     
     @IBOutlet weak var toolListSearchBar: UISearchBar!
     
-    
-    
-    // MARK - Ajax call for toolsearchbar
-    
-    
-    
+
     
     // MARK - Load sample tools
     
+    let locationManager = CLLocationManager()
+    var currentLat: CLLocationDegrees = 0.0
+    var currentLong: CLLocationDegrees = 0.0
     
+    
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        let location = locations.last! as CLLocation
+        currentLat = location.coordinate.latitude
+        currentLong = location.coordinate.longitude
+    }
+
     
     var tools = [Tool]()
     
-    // Table view cells are reused and should be dequeued using a cell identifier.
     
-
     
-    func loadSampleTools() {
-        let tool1 = Tool(title: "Power drill", description: "Portable power drill with bits. Very powerful and lightweight.")
-        let tool2 = Tool(title: "Table saw", description: "Stationary table saw in my garage. Safe and smooth.")
-        let tool3 = Tool(title: "Jack Hammer", description: "Poor-mans jack hammer. Not heavy duty but does the job.")
-        let tool4 = Tool(title: "Full toolkit", description: "No power tools, but my tookit has all hammers, nails, screwdrivers stc for everyday DIY jobs.")
+    
+    func searchBarSearchButtonClicked( searchbar: UISearchBar)
+    {
+        searchbar.resignFirstResponder()
         
-        tools += [tool1, tool2, tool3, tool4]
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
+        
+        let searchTerm = String(toolListSearchBar.text!)
+        
+        print(searchTerm)
+        
+        Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/tools/search", parameters: ["keyword": searchTerm, "latitude": currentLat, "longitude": currentLong]) .responseJSON {response in
+            if let JSON = response.result.value {
+                print("\(JSON)")
+                
+                for var i = 0; i < JSON.count; i++ {
+                    
+                    let owner = JSON[i].objectForKey("owner")
+                    let tool = JSON[i].objectForKey("tool")
+                    let title = tool!["title"] as? String!
+                    
+                    var description: String
+                    
+                    if let des = tool!["description"] as?  NSNull {
+                        description = ""
+                    } else {
+                        description = (tool!["description"] as? String!)!
+                    }
+                    
+                    let myTool = Tool(title: title!, description: description)
+                    
+                    self.tools += [myTool]
+                 }
+                self.tableView.reloadData()
+                
+            } else {
+                print("Sent search term, but no response")
+            }
+        }
         
     }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationManager.delegate = self
+        self.locationManager.requestAlwaysAuthorization()
         
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            self.locationManager.startUpdatingLocation()
+        }
         
         // Load the sample data.
-        loadSampleTools()
     }
+    
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

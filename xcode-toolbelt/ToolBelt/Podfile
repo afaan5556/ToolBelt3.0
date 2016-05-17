@@ -6,5 +6,6 @@ use_frameworks!
 
 target 'ToolBelt' do
 pod 'Alamofire'
+pod 'Firebase', '>= 2.3.2'
 end
 

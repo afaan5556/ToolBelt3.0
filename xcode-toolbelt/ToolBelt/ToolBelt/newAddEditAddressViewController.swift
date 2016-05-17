@@ -44,7 +44,9 @@ class newAddEditAddressController: UIViewController {
         
         let params = ["street_address_1": newStreetAddress1, "street_address_2": newStreetAddress2, "city": newCity, "state": newState]
         
-        Alamofire.request(.PUT, "http://afternoon-bayou-17340.herokuapp.com/users/\(userid)", parameters: params) .responseJSON {response in
+        Alamofire.request(.PUT, "https://afternoon-bayou-17340.herokuapp.com/users/\(userid)", parameters: params) .responseJSON {response in
+//        Alamofire.request(.PUT, "http://localhost:3000/users/\(userid)", parameters: params) .responseJSON {response in
+
             if let responses = response.result.value {
                 print(responses)
             }
