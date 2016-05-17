@@ -47,17 +47,32 @@
                                     <segue destination="OPl-dH-BP0" kind="show" id="0a6-Cd-BGr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvO-p7-tK1">
+                                <rect key="frame" x="244" y="400" width="112" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="Cu7-i2-59t"/>
+                                    <constraint firstAttribute="height" constant="58" id="MiO-6f-sYx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tux-CT-Zzb"/>
+                                    <segue destination="6Ms-72-aRc" kind="show" id="y4R-kg-a41"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lju-cg-GTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fd-Na-jXi"/>
                             <constraint firstItem="EB5-hg-3S2" firstAttribute="top" secondItem="lju-cg-GTx" secondAttribute="bottom" constant="25" id="3hp-Cr-7XO"/>
+                            <constraint firstItem="dvO-p7-tK1" firstAttribute="centerX" secondItem="EB5-hg-3S2" secondAttribute="centerX" id="565-Ug-Myb"/>
                             <constraint firstItem="uZA-g1-CbX" firstAttribute="centerX" secondItem="uuX-RV-TsJ" secondAttribute="centerX" id="7He-qI-ZHF"/>
                             <constraint firstItem="lju-cg-GTx" firstAttribute="top" secondItem="uuX-RV-TsJ" secondAttribute="bottom" constant="25" id="OfS-15-brJ"/>
                             <constraint firstItem="uuX-RV-TsJ" firstAttribute="top" secondItem="uZA-g1-CbX" secondAttribute="bottom" constant="22" id="W2R-N7-F8Y"/>
                             <constraint firstItem="EB5-hg-3S2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acy-66-euI"/>
                             <constraint firstItem="lju-cg-GTx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bY4-gm-JIb"/>
                             <constraint firstItem="uuX-RV-TsJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cyy-hf-GHh"/>
+                            <constraint firstItem="dvO-p7-tK1" firstAttribute="top" secondItem="EB5-hg-3S2" secondAttribute="bottom" constant="21" id="io1-gv-1Sq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="svR-3m-ywO"/>
@@ -92,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-oE-Zou">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-oE-Zou">
                                 <rect key="frame" x="10" y="128" width="580" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -255,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="136" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19t-id-uHF" id="a9a-cX-2aU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="JM7-Aa-tCA">
@@ -689,14 +704,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z2Q-i0-dvF">
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2Q-i0-dvF">
                                 <rect key="frame" x="30" y="77" width="540" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="OPl-dH-BP0" id="0CY-pH-2cn"/>
                                 </connections>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
                                 <rect key="frame" x="0.0" y="121" width="600" height="479"/>
                             </mapView>
                         </subviews>
@@ -749,10 +764,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyToolsTableViewCell" rowHeight="120" id="dBR-X4-h62" customClass="MyToolsTableViewCell" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="120"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-xe-B8X">
@@ -846,8 +861,9 @@
         <image name="saw" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wTs-9r-EVP"/>
-        <segue reference="dNE-lc-4VW"/>
         <segue reference="pRA-DM-M3v"/>
+        <segue reference="y4R-kg-a41"/>
+        <segue reference="dNE-lc-4VW"/>
+        <segue reference="wTs-9r-EVP"/>
     </inferredMetricsTieBreakers>
 </document>

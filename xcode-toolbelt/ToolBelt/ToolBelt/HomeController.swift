@@ -25,6 +25,12 @@ class HomeController: UIViewController {
     @IBOutlet weak var myProfile: UIButton!
     
     
+    @IBAction func logout(sender: AnyObject) {
+        
+        let user = FBSDKLoginManager()
+        user.logOut()
+        
+    }
 
 
 }
