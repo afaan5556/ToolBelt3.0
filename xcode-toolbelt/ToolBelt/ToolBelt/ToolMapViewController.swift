@@ -13,10 +13,10 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     var currentLat: CLLocationDegrees = 0.0
     var currentLong: CLLocationDegrees = 0.0
     
+    @IBOutlet var searchBar: UISearchBar!
     
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet var map: MKMapView!
     
-    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
@@ -66,8 +66,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     
     
-    func searchBarSearchButtonClicked( searchbar: UISearchBar)
-    {
+    func searchBarSearchButtonClicked( searchbar: UISearchBar) {
         searchbar.resignFirstResponder()
         
         let defaults = NSUserDefaults.standardUserDefaults()

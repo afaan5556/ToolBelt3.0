@@ -683,13 +683,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
-                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
-                            </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z2Q-i0-dvF">
                                 <rect key="frame" x="30" y="77" width="540" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OPl-dH-BP0" id="0CY-pH-2cn"/>
+                                </connections>
                             </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -704,7 +707,8 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="DCN-jh-WPL" id="HUV-oU-Xh1"/>
-                        <outlet property="searchBar" destination="z2Q-i0-dvF" id="aX0-HI-ng2"/>
+                        <outlet property="searchBar" destination="z2Q-i0-dvF" id="vHG-PM-0ws"/>
+                        <segue destination="QIX-6Q-sUm" kind="show" identifier="maptochat" id="wTs-9r-EVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUv-aM-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -836,8 +840,8 @@
         <image name="saw" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wTs-9r-EVP"/>
         <segue reference="dNE-lc-4VW"/>
         <segue reference="pRA-DM-M3v"/>
-        <segue reference="yb2-F9-T4N"/>
     </inferredMetricsTieBreakers>
 </document>
