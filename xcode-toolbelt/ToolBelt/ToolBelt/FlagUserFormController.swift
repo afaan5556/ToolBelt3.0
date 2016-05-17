@@ -14,6 +14,16 @@ import Alamofire
 
 class FlagUserFormController: UITableViewController {
     
+    var flagee = Int()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print(flagee)
+        
+    }
+
+    
     
     //    func flagUser() {
     //
@@ -46,6 +56,8 @@ class FlagUserFormController: UITableViewController {
     
     
     @IBAction func flagUser(sender: AnyObject) {
+        
+        
         
         
         
