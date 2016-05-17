@@ -107,9 +107,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Pc-Mtu">
-                                <rect key="frame" x="544" y="537" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Pc-Mtu">
+                                <rect key="frame" x="549" y="537" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,7 +137,7 @@
                     <navigationItem key="navigationItem" title="Contact User" id="n4N-h0-WB4">
                         <barButtonItem key="leftBarButtonItem" title="Flag User" id="jRv-zz-TE0">
                             <connections>
-                                <segue destination="d1X-YK-9bV" kind="show" identifier="flagUserSegue" id="YUr-eX-QN9"/>
+                                <segue destination="YR9-bL-2Pu" kind="show" identifier="flagUserSegue" id="2Ud-Qx-bAi"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Rate User" id="yy4-Pm-0GV"/>
@@ -147,54 +147,86 @@
             </objects>
             <point key="canvasLocation" x="3537" y="485"/>
         </scene>
-        <!--Flag User Form Controller-->
-        <scene sceneID="c1h-wD-xaH">
+        <!--Flag User-->
+        <scene sceneID="rtv-dD-9ZY">
             <objects>
-                <tableViewController id="d1X-YK-9bV" customClass="FlagUserFormController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vpr-3L-qFH">
+                <viewController id="YR9-bL-2Pu" customClass="FlagUserController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sOk-12-8nq"/>
+                        <viewControllerLayoutGuide type="bottom" id="vBu-Fb-Wcq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Ae-sJ-cVC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlagUserReasonCell" rowHeight="60" id="fPU-yU-rUC" customClass="FlagUserReasonCell" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPU-yU-rUC" id="10o-u4-rYO">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-X9-Oyd">
-                                            <rect key="frame" x="8" y="19" width="240" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-Jq-WpT">
-                                            <rect key="frame" x="280" y="15" width="66" height="30"/>
-                                            <state key="normal" title="Flag User"/>
-                                            <connections>
-                                                <action selector="flagUser:" destination="fPU-yU-rUC" eventType="touchUpInside" id="o2t-Rb-Sw7"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="mU0-X9-Oyd" firstAttribute="centerY" secondItem="XjO-Jq-WpT" secondAttribute="centerY" id="jI5-bf-lmt"/>
-                                    </constraints>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-JQ-sDp">
+                                <rect key="frame" x="103" y="236" width="123" height="30"/>
+                                <state key="normal" title="Didn't Return Tool"/>
                                 <connections>
-                                    <outlet property="flagReason" destination="mU0-X9-Oyd" id="ouN-c2-dt7"/>
+                                    <action selector="didntReturnButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="RpB-hJ-qaY"/>
+                                    <segue destination="QIX-6Q-sUm" kind="show" id="Lmw-A4-Nw3"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="d1X-YK-9bV" id="c2o-FM-hjg"/>
-                            <outlet property="delegate" destination="d1X-YK-9bV" id="vNC-0q-acB"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AbN-IX-B2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qit-9d-VVM">
+                                <rect key="frame" x="103" y="278" width="99" height="30"/>
+                                <state key="normal" title="Damaged Tool"/>
+                                <connections>
+                                    <action selector="damagedToolButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="i3H-9I-CD5"/>
+                                    <segue destination="QIX-6Q-sUm" kind="show" id="Vvp-RY-K17"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-jC-9mN">
+                                <rect key="frame" x="103" y="323" width="223" height="30"/>
+                                <state key="normal" title="Loaned a Poorly Maintained Tool"/>
+                                <connections>
+                                    <action selector="poorlyMaintainedButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="gog-vZ-o7Y"/>
+                                    <segue destination="QIX-6Q-sUm" kind="show" id="DBv-d4-XlE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-e0-PD5">
+                                <rect key="frame" x="103" y="364" width="40" height="30"/>
+                                <state key="normal" title="Other"/>
+                                <connections>
+                                    <action selector="otherFlagButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="7pd-hv-fve"/>
+                                    <segue destination="QIX-6Q-sUm" kind="show" id="Qss-sw-85N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag Reasons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iy-vL-rD8">
+                                <rect key="frame" x="103" y="142" width="144" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-u5-f0v">
+                                <rect key="frame" x="103" y="191" width="130" height="30"/>
+                                <state key="normal" title="Returned Tool Late"/>
+                                <connections>
+                                    <action selector="returnedLateButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="N6L-6r-W3v"/>
+                                    <segue destination="QIX-6Q-sUm" kind="show" id="Ytl-8l-T9v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="GLJ-JQ-sDp" secondAttribute="leading" id="67h-H3-1w2"/>
+                            <constraint firstItem="qit-9d-VVM" firstAttribute="centerY" secondItem="1Ae-sJ-cVC" secondAttribute="centerY" constant="-7" id="AC6-Ie-JlT"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="top" secondItem="o9G-u5-f0v" secondAttribute="bottom" constant="102" id="EG5-JJ-rDH"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="e4P-e0-PD5" secondAttribute="leading" id="I7g-tA-vV0"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="top" secondItem="GLJ-JQ-sDp" secondAttribute="bottom" constant="57" id="LDu-HV-mb1"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="o9G-u5-f0v" secondAttribute="leading" id="bq7-xs-fkm"/>
+                            <constraint firstItem="4iy-vL-rD8" firstAttribute="leading" secondItem="o9G-u5-f0v" secondAttribute="leading" id="cBI-bx-KUO"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="qit-9d-VVM" secondAttribute="leading" id="d64-wS-55p"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="top" secondItem="qit-9d-VVM" secondAttribute="bottom" constant="15" id="l6c-oa-ti8"/>
+                            <constraint firstItem="e4P-e0-PD5" firstAttribute="top" secondItem="4Ti-jC-9mN" secondAttribute="bottom" constant="11" id="rFP-rU-ujD"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="1Ae-sJ-cVC" secondAttribute="leadingMargin" constant="83" id="tHg-AD-EE9"/>
+                            <constraint firstItem="o9G-u5-f0v" firstAttribute="top" secondItem="4iy-vL-rD8" secondAttribute="bottom" constant="21" id="wV7-XM-oqf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flag User" id="T3K-Pg-WYP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16k-HH-8Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4275" y="485"/>
+            <point key="canvasLocation" x="4252" y="485"/>
         </scene>
         <!--Tool Search Results-->
         <scene sceneID="kzW-DC-GDp">
@@ -711,7 +743,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyToolsTableViewCell" rowHeight="120" id="dBR-X4-h62" customClass="MyToolsTableViewCell" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
@@ -808,7 +840,8 @@
         <image name="saw" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jIz-To-nwW"/>
-        <segue reference="sFT-Sg-Lj9"/>
+        <segue reference="yb2-F9-T4N"/>
+        <segue reference="dNE-lc-4VW"/>
+        <segue reference="pRA-DM-M3v"/>
     </inferredMetricsTieBreakers>
 </document>
