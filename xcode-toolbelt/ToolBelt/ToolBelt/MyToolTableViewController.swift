@@ -46,7 +46,7 @@ class MyToolTableViewController: UITableViewController {
                         description = (JSON[i]["description"] as? String)!
                     }
                     
-                    let myTool = Tool(title: title, description: description)
+                    let myTool = Tool(title: title, description: description, ownerId: userid)
                     
                     self.mytools += [myTool]
                     

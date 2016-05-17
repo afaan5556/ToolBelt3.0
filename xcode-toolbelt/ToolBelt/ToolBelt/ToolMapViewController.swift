@@ -9,22 +9,23 @@ import MapKit
 class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
-    
-    
-
-    
     let locationManager = CLLocationManager()
     var currentLat: CLLocationDegrees = 0.0
     var currentLong: CLLocationDegrees = 0.0
     
     
-    
+    var userId: Int = 0
     
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var map: MKMapView!
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "maptochat") {
+            let destination = segue.destinationViewController as! ChatController
+            destination.contact = userId
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,11 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     }
     
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let annotation = annotationView.annotation as! MyAnnotation
         if control == annotationView.rightCalloutAccessoryView {
             if control == annotationView.rightCalloutAccessoryView {
-                performSegueWithIdentifier("maptochat", sender: self)
+                userId = annotation.identifier!
+                self.performSegueWithIdentifier("maptochat", sender: self)
             }
         }
     }
@@ -57,11 +60,14 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             pin!.pinColor = .Red
             pin!.canShowCallout = true
             pin!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+            //pin!.image = UIImage(named: "custom_pin.png")
         } else {
             pin!.annotation = annotation
         }
         return pin
     }
+    
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
@@ -70,6 +76,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         currentLat = location.coordinate.latitude
         currentLong = location.coordinate.longitude
     }
+    
     
     
     
@@ -87,10 +94,13 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             if let JSON = response.result.value {
                 print("\(JSON)")
                 
+                
                 for var i = 0; i < JSON.count; i++ {
                     
                     let owner = JSON[i].objectForKey("owner")
                     let tool = JSON[i].objectForKey("tool")
+                    let id = tool!["user_id"] as? Int!
+                    print(id)
                     let toolName = tool!["title"]!
                     let toolDescription = tool!["description"]!
                     var lat = owner!["latitude"]?!.doubleValue
@@ -110,14 +120,15 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                     
                     func annotate() {
                         
-                        let annotation = MKPointAnnotation()
+                        let annotation = MyAnnotation(identifier: id!, title: "\(toolName!)", subtitle: "\(toolDescription!)", coordinate: location)
                         
-                        annotation.coordinate = location
-                        
-                        annotation.title = "\(toolName!)"
-                        
-                        annotation.subtitle = "\(toolDescription!)"
-                        
+                        //                        annotation.coordinate: location
+                        //
+                        //                        annotation.title: "\(toolName!)"
+                        //
+                        //                        annotation.subtitle: "\(toolDescription!)"
+                        //
+                        //                        annotation.identifier: "\(owner!["id"])"
                         
                         self.map.addAnnotation(annotation)
                         
@@ -132,5 +143,4 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
         
     }
-    
 }
