@@ -5,12 +5,8 @@
 //  Created by Peter Kang on 5/14/16.
 //  Copyright © 2016 teamToolBelt. All rights reserved.
 //
-
 import UIKit
 import Alamofire
-
-
-
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
@@ -21,21 +17,26 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         return button
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        super.viewWillAppear(true)
+        
         view.addSubview(loginButton)
         loginButton.center = view.center
         loginButton.delegate = self
         
-        let token = FBSDKAccessToken.currentAccessToken()
-        fetchProfile()
-        self.performSegueWithIdentifier("mainMenu", sender: self)
+        
+        if let token = FBSDKAccessToken.currentAccessToken(){
+            fetchProfile()
+            super.performSegueWithIdentifier("mainMenu", sender: self)
+        }
         
         
     }
     
     func fetchProfile(){
-        print("fetch profile")
+        
         
         var email = ""
         var first_name = ""
@@ -45,35 +46,27 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         let parameters = ["fields": "email, first_name, last_name, picture.type(large)"]
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
             
-            if error == nil{
-                print("hey")
-                email = (result["email"] as? String)!
-                first_name = (result["first_name"] as? String)!
-                last_name = (result["last_name"] as? String)!
-                image = (result["picture"]!!["data"]!!["url"] as? String)!
-                
-                let params = ["email": email, "first_name": first_name, "last_name": last_name, "image": image]
-                
-                Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users", parameters: params).responseJSON { response in
-//                Alamofire.request(.POST, "http://localhost:3000/users", parameters: params).responseJSON { response in
-                    if let JSON = response.result.value {
-                        print(JSON)
-                        let user_id = (JSON["user_id"] as! Int)
-                        let defaults = NSUserDefaults.standardUserDefaults()
-                        defaults.setObject(user_id, forKey: "toolBeltUserID")
-                        defaults.synchronize()
-                    }
-                }
-                
-            }
+            email = (result["email"] as? String)!
+            first_name = (result["first_name"] as? String)!
+            last_name = (result["last_name"] as? String)!
+            image = (result["picture"]!!["data"]!!["url"] as? String)!
             
+            Alamofire.request(.POST, "https://afternoon-bayou-17340.herokuapp.com/users", parameters: ["email": email, "first_name": first_name, "last_name": last_name, "image": image]).responseJSON { response in
+                if let JSON = response.result.value {
+                    print(JSON)
+                    let user_id = (JSON["user_id"] as! Int)
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(user_id, forKey: "toolBeltUserID")
+                    defaults.synchronize()
+                }
+            }
         }
-        
     }
     
     func loadDefaults() {
         let defaults = NSUserDefaults.standardUserDefaults()
         print(defaults.objectForKey("toolBeltUserID") as! Int)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,7 +80,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-//        print("completed login")
+        //        print("completed login")
     }
     
     func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
@@ -96,4 +89,3 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
 }
-

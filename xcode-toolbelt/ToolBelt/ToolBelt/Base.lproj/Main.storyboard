@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GHa-fH-D1o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8ua-R1-JPz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Search for Tools"/>
                                 <connections>
-                                    <segue destination="FLx-ja-gy2" kind="show" id="azl-nH-kE3"/>
+                                    <segue destination="OPl-dH-BP0" kind="show" id="0a6-Cd-BGr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fke-K0-ffJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="485"/>
+            <point key="canvasLocation" x="2756" y="-271"/>
         </scene>
         <!--Flag User-->
         <scene sceneID="rtv-dD-9ZY">
@@ -249,7 +249,7 @@
                                 <rect key="frame" x="0.0" y="136" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19t-id-uHF" id="a9a-cX-2aU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drill" translatesAutoresizingMaskIntoConstraints="NO" id="JM7-Aa-tCA">
@@ -296,51 +296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QtO-73-8Cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="513"/>
-        </scene>
-        <!--Tool Search Results-->
-        <scene sceneID="mQk-7Q-3bg">
-            <objects>
-                <viewController id="FLx-ja-gy2" customClass="ToolMapViewController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nn2-Xg-85w"/>
-                        <viewControllerLayoutGuide type="bottom" id="EhQ-fj-tJ8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Qb-jQ-gsu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-pa-BQE">
-                                <rect key="frame" x="0.0" y="123" width="600" height="477"/>
-                            </mapView>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="am2-cN-yDR">
-                                <rect key="frame" x="0.0" y="79" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="FLx-ja-gy2" id="cwc-b4-Kqa"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="am2-cN-yDR" firstAttribute="leading" secondItem="0Qb-jQ-gsu" secondAttribute="leadingMargin" constant="5" id="3aY-JK-k45"/>
-                            <constraint firstItem="am2-cN-yDR" firstAttribute="centerX" secondItem="0Qb-jQ-gsu" secondAttribute="centerX" id="3nt-kw-Hga"/>
-                            <constraint firstItem="EhQ-fj-tJ8" firstAttribute="top" secondItem="BUd-pa-BQE" secondAttribute="bottom" id="LEs-Ny-z08"/>
-                            <constraint firstItem="BUd-pa-BQE" firstAttribute="leading" secondItem="0Qb-jQ-gsu" secondAttribute="leadingMargin" constant="-20" id="mbN-zP-UeW"/>
-                            <constraint firstItem="BUd-pa-BQE" firstAttribute="leading" secondItem="0Qb-jQ-gsu" secondAttribute="leadingMargin" constant="-20" id="nrD-BD-4Vl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="am2-cN-yDR" secondAttribute="trailing" constant="5" id="vWu-88-QaG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BUd-pa-BQE" secondAttribute="trailing" constant="-20" id="zOh-Rj-DKx"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tool Search Results" id="IKs-FG-DK7"/>
-                    <connections>
-                        <outlet property="map" destination="BUd-pa-BQE" id="ETc-rb-8Nl"/>
-                        <outlet property="newSearchBar" destination="am2-cN-yDR" id="QsD-F2-URx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7PI-0k-SqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2010" y="-291"/>
+            <point key="canvasLocation" x="2161" y="504"/>
         </scene>
         <!--New Add Edit Address Controller-->
         <scene sceneID="A2U-oc-zgE">
@@ -715,6 +671,46 @@
             </objects>
             <point key="canvasLocation" x="1288" y="-291"/>
         </scene>
+        <!--Tool Map View Controller-->
+        <scene sceneID="8yx-1Y-idP">
+            <objects>
+                <viewController id="OPl-dH-BP0" customClass="ToolMapViewController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fhn-Mw-JTt"/>
+                        <viewControllerLayoutGuide type="bottom" id="ucL-Mi-c1h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VfS-UI-QaA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z2Q-i0-dvF">
+                                <rect key="frame" x="30" y="77" width="540" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z2Q-i0-dvF" firstAttribute="top" secondItem="Fhn-Mw-JTt" secondAttribute="bottom" constant="13" id="5gF-yB-bUC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DCN-jh-WPL" secondAttribute="trailing" constant="-20" id="Pas-3D-U36"/>
+                            <constraint firstItem="DCN-jh-WPL" firstAttribute="top" secondItem="z2Q-i0-dvF" secondAttribute="bottom" id="aZ3-5L-l6l"/>
+                            <constraint firstItem="z2Q-i0-dvF" firstAttribute="leading" secondItem="VfS-UI-QaA" secondAttribute="leadingMargin" constant="10" id="jUI-OK-0vZ"/>
+                            <constraint firstItem="DCN-jh-WPL" firstAttribute="leading" secondItem="VfS-UI-QaA" secondAttribute="leadingMargin" constant="-20" id="l4V-KQ-glk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z2Q-i0-dvF" secondAttribute="trailing" constant="10" id="lsi-15-cxc"/>
+                            <constraint firstItem="ucL-Mi-c1h" firstAttribute="top" secondItem="DCN-jh-WPL" secondAttribute="bottom" id="qVl-eM-uYI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="DCN-jh-WPL" id="HUV-oU-Xh1"/>
+                        <outlet property="searchBar" destination="z2Q-i0-dvF" id="aX0-HI-ng2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUv-aM-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="-289"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qa3-cX-dl7">
             <objects>
@@ -746,7 +742,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-xe-B8X">
@@ -814,7 +810,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-3P-Cxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2738" y="1360"/>
+            <point key="canvasLocation" x="2788" y="1388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="auN-ZE-FWU">
@@ -832,7 +828,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6W-M3-g7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2725" y="485"/>
+            <point key="canvasLocation" x="2827" y="513"/>
         </scene>
     </scenes>
     <resources>
@@ -840,8 +836,8 @@
         <image name="saw" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yb2-F9-T4N"/>
         <segue reference="dNE-lc-4VW"/>
         <segue reference="pRA-DM-M3v"/>
+        <segue reference="yb2-F9-T4N"/>
     </inferredMetricsTieBreakers>
 </document>

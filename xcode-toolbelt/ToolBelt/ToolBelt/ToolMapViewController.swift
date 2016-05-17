@@ -6,24 +6,22 @@
 //  Copyright © 2016 teamToolBelt. All rights reserved.
 import Alamofire
 import MapKit
-
-class ToolMapViewController: UIViewController, CLLocationManagerDelegate {
+class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    @IBOutlet var map: MKMapView!
     
     let locationManager = CLLocationManager()
     var currentLat: CLLocationDegrees = 0.0
     var currentLong: CLLocationDegrees = 0.0
     
     
+    @IBOutlet weak var map: MKMapView!
     
-    @IBOutlet var newSearchBar: UISearchBar!
-    
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        map.delegate = self
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
         
@@ -34,6 +32,28 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate {
             self.locationManager.startUpdatingLocation()
         }
         
+    }
+    
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            if control == annotationView.rightCalloutAccessoryView {
+                performSegueWithIdentifier("maptochat", sender: self)
+            }
+        }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseIdentifier = "pin"
+        var pin = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier) as? MKPinAnnotationView
+        if pin == nil {
+            pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            pin!.pinColor = .Red
+            pin!.canShowCallout = true
+            pin!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        } else {
+            pin!.annotation = annotation
+        }
+        return pin
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -53,7 +73,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
         
-        let searchTerm = String(newSearchBar.text!)
+        let searchTerm = String(searchBar.text!)
         
         print(searchTerm)
         
@@ -91,6 +111,8 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate {
                         annotation.title = "\(toolName!)"
                         
                         annotation.subtitle = "\(toolDescription!)"
+                        
+                        
                         self.map.addAnnotation(annotation)
                         
                     }
