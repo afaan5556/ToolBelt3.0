@@ -9,6 +9,10 @@ import MapKit
 class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
+    
+    
+
+    
     let locationManager = CLLocationManager()
     var currentLat: CLLocationDegrees = 0.0
     var currentLong: CLLocationDegrees = 0.0
