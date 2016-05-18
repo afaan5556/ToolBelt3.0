@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0910A4B21CED1259006C2BF0 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0910A4B11CED1259006C2BF0 /* RatingController.swift */; };
+		0910A4B41CED1337006C2BF0 /* RatingsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0910A4B31CED1337006C2BF0 /* RatingsPageController.swift */; };
 		0942B94F1CE95B92003EEA78 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942B94E1CE95B92003EEA78 /* testViewController.swift */; };
 		097B251E1CEAAF1100B8E559 /* FlagUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B251D1CEAAF1100B8E559 /* FlagUserController.swift */; };
 		0983C2D81CE8FA48009D8011 /* AddToolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983C2D71CE8FA48009D8011 /* AddToolController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0910A4B11CED1259006C2BF0 /* RatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
+		0910A4B31CED1337006C2BF0 /* RatingsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsPageController.swift; sourceTree = "<group>"; };
 		0942B94E1CE95B92003EEA78 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		097B251D1CEAAF1100B8E559 /* FlagUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlagUserController.swift; path = ../FlagUserController.swift; sourceTree = "<group>"; };
 		0983C2D71CE8FA48009D8011 /* AddToolController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToolController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				BD9105E41CE7D47B0058165D /* ViewController.swift */,
 				09D55A0D1CE7B81500EEE324 /* HomeController.swift */,
 				09D55A0F1CE7B81500EEE324 /* Main.storyboard */,
+				0910A4B11CED1259006C2BF0 /* RatingController.swift */,
+				0910A4B31CED1337006C2BF0 /* RatingsPageController.swift */,
 				099BE8871CEB9EC300DED842 /* LaunchScreen.storyboard */,
 				09E523441CEA83A100000440 /* ChatController.swift */,
 				09BA78FA1CEC3D57003FD426 /* MyMessagesController.swift */,
@@ -391,6 +397,7 @@
 			files = (
 				BD9105E51CE7D47B0058165D /* ViewController.swift in Sources */,
 				09D55A0E1CE7B81500EEE324 /* HomeController.swift in Sources */,
+				0910A4B21CED1259006C2BF0 /* RatingController.swift in Sources */,
 				09F805EE1CEBDE04005D3C13 /* MyAnnotation.swift in Sources */,
 				0942B94F1CE95B92003EEA78 /* testViewController.swift in Sources */,
 				09D55A0C1CE7B81500EEE324 /* AppDelegate.swift in Sources */,
@@ -405,6 +412,7 @@
 				09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */,
 				09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */,
 				0983C2DC1CE9001E009D8011 /* ToolTableViewCell.swift in Sources */,
+				0910A4B41CED1337006C2BF0 /* RatingsPageController.swift in Sources */,
 				09A1BD571CE96C7100A4387F /* newAddEditAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

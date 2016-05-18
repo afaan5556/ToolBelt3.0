@@ -86,6 +86,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func searchBarSearchButtonClicked( searchbar: UISearchBar) {
         searchbar.resignFirstResponder()
+        tools = []
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int

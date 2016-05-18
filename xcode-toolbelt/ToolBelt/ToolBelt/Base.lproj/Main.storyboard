@@ -101,7 +101,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Pc-Mtu">
                                 <rect key="frame" x="546" y="488" width="44" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Send"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="sendMessageButton:" destination="QIX-6Q-sUm" eventType="touchUpInside" id="Igh-pg-YyH"/>
                                 </connections>
@@ -109,33 +111,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJy-YV-WfI">
                                 <rect key="frame" x="518" y="20" width="72" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Rate User"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVv-ru-SFk">
-                                <rect key="frame" x="10" y="20" width="69" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Flag User"/>
+                                <state key="normal" title="Rate User">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="YR9-bL-2Pu" kind="show" identifier="flagUserSegue" id="8hT-0J-WVW"/>
+                                    <segue destination="eP8-ZC-U4g" kind="show" identifier="rateSegue" id="fRw-kG-i2e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-1Z-PZ8">
-                                <rect key="frame" x="272" y="23" width="56" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-1Z-PZ8">
+                                <rect key="frame" x="266" y="20.5" width="68" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-oE-Zou">
-                                <rect key="frame" x="10" y="84" width="580" height="290"/>
+                                <rect key="frame" x="10" y="84" width="580" height="358"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="290" id="UbO-sY-JBl"/>
+                                    <constraint firstAttribute="height" constant="358" id="UbO-sY-JBl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.46274509800000002" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WTd-oE-Zou" firstAttribute="top" secondItem="gQd-bj-S65" secondAttribute="bottom" constant="64" id="8K2-T9-YVg"/>
                             <constraint firstItem="PJy-YV-WfI" firstAttribute="top" secondItem="gQd-bj-S65" secondAttribute="bottom" id="9CC-4d-BMz"/>
@@ -148,10 +147,7 @@
                             <constraint firstItem="Tw4-Ed-hmU" firstAttribute="centerX" secondItem="WTd-oE-Zou" secondAttribute="centerX" id="WZY-Gv-WI5"/>
                             <constraint firstItem="WTd-oE-Zou" firstAttribute="centerX" secondItem="USU-9B-Qkf" secondAttribute="centerX" id="dXc-9M-WGE"/>
                             <constraint firstItem="oBd-Pc-Mtu" firstAttribute="trailing" secondItem="Tw4-Ed-hmU" secondAttribute="trailing" id="jel-W7-heT"/>
-                            <constraint firstItem="jVv-ru-SFk" firstAttribute="leading" secondItem="Tw4-Ed-hmU" secondAttribute="leading" id="lqw-On-e5b"/>
-                            <constraint firstItem="AiT-1Z-PZ8" firstAttribute="centerY" secondItem="jVv-ru-SFk" secondAttribute="centerY" id="mis-zA-dq6"/>
                             <constraint firstItem="Tw4-Ed-hmU" firstAttribute="centerX" secondItem="USU-9B-Qkf" secondAttribute="centerX" id="mvJ-lD-BEg"/>
-                            <constraint firstItem="jVv-ru-SFk" firstAttribute="top" secondItem="gQd-bj-S65" secondAttribute="bottom" id="vCT-av-Sny"/>
                             <constraint firstItem="Tw4-Ed-hmU" firstAttribute="trailing" secondItem="USU-9B-Qkf" secondAttribute="trailingMargin" constant="10" id="yM4-Bl-vRx"/>
                             <constraint firstItem="yGj-6o-SLH" firstAttribute="top" secondItem="oBd-Pc-Mtu" secondAttribute="bottom" constant="33" id="yjp-Uf-wd3"/>
                         </constraints>
@@ -173,7 +169,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fke-K0-ffJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="1254"/>
+            <point key="canvasLocation" x="1540" y="1532"/>
+        </scene>
+        <!--Ratings Page Controller-->
+        <scene sceneID="sXO-zQ-lKO">
+            <objects>
+                <viewController id="eP8-ZC-U4g" customClass="RatingsPageController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mDI-F4-CK2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dzg-rK-Ogj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6ar-qU-XLB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-pd-lkF">
+                                <rect key="frame" x="163" y="402" width="97" height="30"/>
+                                <state key="normal" title="Submit Rating"/>
+                                <connections>
+                                    <action selector="submitRating:" destination="eP8-ZC-U4g" eventType="touchUpInside" id="5bw-gV-6qO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-3C-rcp">
+                                <rect key="frame" x="204" y="498" width="66" height="30"/>
+                                <state key="normal" title="Flag User"/>
+                                <connections>
+                                    <segue destination="YR9-bL-2Pu" kind="show" identifier="flagUserSegue" id="7n9-vf-dOf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-Nv-ijx" customClass="RatingControl" customModule="ToolBelt" customModuleProvider="target">
+                                <rect key="frame" x="45" y="213" width="400" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ratingView" destination="RMC-Nv-ijx" id="PWm-O8-6FO"/>
+                        <segue destination="o2o-k7-4sf" kind="show" identifier="returnHomeFromRating" id="h1O-g4-RfZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfb-xn-Q0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="1813"/>
         </scene>
         <!--Flag User-->
         <scene sceneID="rtv-dD-9ZY">
@@ -191,7 +229,7 @@
                                 <rect key="frame" x="-193" y="-115" width="859" height="859"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-JQ-sDp">
-                                <rect key="frame" x="103" y="236" width="123" height="30"/>
+                                <rect key="frame" x="53" y="236" width="123" height="30"/>
                                 <state key="normal" title="Didn't Return Tool"/>
                                 <connections>
                                     <action selector="didntReturnButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="RpB-hJ-qaY"/>
@@ -199,7 +237,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qit-9d-VVM">
-                                <rect key="frame" x="103" y="278" width="99" height="30"/>
+                                <rect key="frame" x="53" y="278" width="99" height="30"/>
                                 <state key="normal" title="Damaged Tool"/>
                                 <connections>
                                     <action selector="damagedToolButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="i3H-9I-CD5"/>
@@ -207,7 +245,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-jC-9mN">
-                                <rect key="frame" x="103" y="323" width="223" height="30"/>
+                                <rect key="frame" x="53" y="323" width="223" height="30"/>
                                 <state key="normal" title="Loaned a Poorly Maintained Tool"/>
                                 <connections>
                                     <action selector="poorlyMaintainedButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="gog-vZ-o7Y"/>
@@ -215,7 +253,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-e0-PD5">
-                                <rect key="frame" x="103" y="364" width="40" height="30"/>
+                                <rect key="frame" x="53" y="364" width="40" height="30"/>
                                 <state key="normal" title="Other"/>
                                 <connections>
                                     <action selector="otherFlagButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="7pd-hv-fve"/>
@@ -223,13 +261,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag Reasons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iy-vL-rD8">
-                                <rect key="frame" x="103" y="142" width="144" height="28"/>
+                                <rect key="frame" x="53" y="142" width="144" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-u5-f0v">
-                                <rect key="frame" x="103" y="191" width="130" height="30"/>
+                                <rect key="frame" x="53" y="191" width="130" height="30"/>
                                 <state key="normal" title="Returned Tool Late"/>
                                 <connections>
                                     <action selector="returnedLateButton:" destination="YR9-bL-2Pu" eventType="touchUpInside" id="N6L-6r-W3v"/>
@@ -249,7 +287,7 @@
                             <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="qit-9d-VVM" secondAttribute="leading" id="d64-wS-55p"/>
                             <constraint firstItem="4Ti-jC-9mN" firstAttribute="top" secondItem="qit-9d-VVM" secondAttribute="bottom" constant="15" id="l6c-oa-ti8"/>
                             <constraint firstItem="e4P-e0-PD5" firstAttribute="top" secondItem="4Ti-jC-9mN" secondAttribute="bottom" constant="11" id="rFP-rU-ujD"/>
-                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="1Ae-sJ-cVC" secondAttribute="leadingMargin" constant="83" id="tHg-AD-EE9"/>
+                            <constraint firstItem="4Ti-jC-9mN" firstAttribute="leading" secondItem="1Ae-sJ-cVC" secondAttribute="leadingMargin" constant="33" id="tHg-AD-EE9"/>
                             <constraint firstItem="o9G-u5-f0v" firstAttribute="top" secondItem="4iy-vL-rD8" secondAttribute="bottom" constant="21" id="wV7-XM-oqf"/>
                         </constraints>
                     </view>
@@ -257,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16k-HH-8Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2864" y="1273"/>
+            <point key="canvasLocation" x="3268" y="1157"/>
         </scene>
         <!--Tool Table View Controller-->
         <scene sceneID="kzW-DC-GDp">
@@ -280,7 +318,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19t-id-uHF" id="a9a-cX-2aU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tool Title xxxxxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-jd-p0D">
@@ -655,7 +693,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfJ-em-9Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="-1400"/>
+            <point key="canvasLocation" x="1931" y="-1664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Luo-pD-JnN">
@@ -768,7 +806,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fya-sd-NOP" id="az4-Ht-p05">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdx-4v-9q8">
@@ -845,7 +883,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-xe-B8X">
@@ -896,12 +934,12 @@
         <image name="saw" width="200" height="200"/>
         <image name="tools" width="1280" height="1039"/>
         <image name="tools1_" width="1280" height="853"/>
-        <image name="tools2" width="1280" height="853"/>
+        <image name="tools2" width="640" height="426"/>
         <image name="tools5" width="1280" height="850"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="prg-KR-1g2"/>
+        <segue reference="yzf-Ce-SlC"/>
+        <segue reference="h1O-g4-RfZ"/>
         <segue reference="y4R-kg-a41"/>
-        <segue reference="DgL-Bt-cOo"/>
     </inferredMetricsTieBreakers>
 </document>

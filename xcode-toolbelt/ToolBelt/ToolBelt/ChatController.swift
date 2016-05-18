@@ -19,9 +19,9 @@ class ChatController: UIViewController {
     var ref = Firebase()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "flagUserSegue") {
-            let destination : FlagUserController = segue.destinationViewController as! FlagUserController
-            destination.flagee = contact
+        if (segue.identifier == "rateSegue") {
+            let destination : RatingsPageController = segue.destinationViewController as! RatingsPageController
+            destination.ratee = contact
             
         }
     }
