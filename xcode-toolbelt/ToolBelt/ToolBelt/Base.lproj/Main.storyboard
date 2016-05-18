@@ -30,7 +30,7 @@
                                     <segue destination="6Ms-72-aRc" kind="show" id="y4R-kg-a41"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpJ-vA-v3x">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpJ-vA-v3x">
                                 <rect key="frame" x="144" y="204" width="312" height="192"/>
                                 <state key="normal" image="Toolbelt_Logo_Search2"/>
                                 <connections>
@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-1Z-PZ8">
-                                <rect key="frame" x="266" y="20.5" width="68" height="33.5"/>
+                                <rect key="frame" x="266" y="21" width="68" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -183,26 +183,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-pd-lkF">
-                                <rect key="frame" x="163" y="402" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tools6" translatesAutoresizingMaskIntoConstraints="NO" id="g93-38-bnK">
+                                <rect key="frame" x="0.0" y="-245" width="600" height="895"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-pd-lkF">
+                                <rect key="frame" x="242" y="132" width="97" height="30"/>
                                 <state key="normal" title="Submit Rating"/>
                                 <connections>
                                     <action selector="submitRating:" destination="eP8-ZC-U4g" eventType="touchUpInside" id="5bw-gV-6qO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-3C-rcp">
-                                <rect key="frame" x="204" y="498" width="66" height="30"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-Nv-ijx" customClass="RatingControl" customModule="ToolBelt" customModuleProvider="target">
+                                <rect key="frame" x="90" y="60" width="400" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-3C-rcp">
+                                <rect key="frame" x="267" y="550" width="66" height="30"/>
                                 <state key="normal" title="Flag User"/>
                                 <connections>
                                     <segue destination="YR9-bL-2Pu" kind="show" identifier="flagUserSegue" id="7n9-vf-dOf"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-Nv-ijx" customClass="RatingControl" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="45" y="213" width="400" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dzg-rK-Ogj" firstAttribute="top" secondItem="Ujp-3C-rcp" secondAttribute="bottom" constant="10" id="6kC-rU-4L3"/>
+                            <constraint firstItem="sOR-pd-lkF" firstAttribute="top" secondItem="RMC-Nv-ijx" secondAttribute="bottom" constant="12" id="Bq2-nJ-FBP"/>
+                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="top" secondItem="mDI-F4-CK2" secondAttribute="bottom" constant="20" id="KkH-Pq-SPF"/>
+                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="WTk-zU-lpY"/>
+                            <constraint firstItem="sOR-pd-lkF" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="Zso-xa-vhc"/>
+                            <constraint firstItem="Ujp-3C-rcp" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="xTi-Km-sWq"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ratingView" destination="RMC-Nv-ijx" id="PWm-O8-6FO"/>
@@ -318,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19t-id-uHF" id="a9a-cX-2aU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tool Title xxxxxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-jd-p0D">
@@ -806,7 +817,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fya-sd-NOP" id="az4-Ht-p05">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdx-4v-9q8">
@@ -883,7 +894,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBR-X4-h62" id="2FE-34-hdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saw" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-xe-B8X">
@@ -936,6 +947,7 @@
         <image name="tools1_" width="1280" height="853"/>
         <image name="tools2" width="640" height="426"/>
         <image name="tools5" width="1280" height="850"/>
+        <image name="tools6" width="640" height="955"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yzf-Ce-SlC"/>
