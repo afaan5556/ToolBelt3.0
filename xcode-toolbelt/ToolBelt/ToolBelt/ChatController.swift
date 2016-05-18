@@ -29,6 +29,8 @@ class ChatController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatWindow.editable = false
+        
         
         
         let defaults = NSUserDefaults.standardUserDefaults()

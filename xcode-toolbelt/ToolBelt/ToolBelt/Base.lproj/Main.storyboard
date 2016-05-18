@@ -184,20 +184,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tools6" translatesAutoresizingMaskIntoConstraints="NO" id="g93-38-bnK">
-                                <rect key="frame" x="0.0" y="-245" width="600" height="895"/>
+                                <rect key="frame" x="-109" y="-138" width="600" height="895"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-pd-lkF">
-                                <rect key="frame" x="242" y="132" width="97" height="30"/>
+                                <rect key="frame" x="249" y="168" width="97" height="30"/>
                                 <state key="normal" title="Submit Rating"/>
                                 <connections>
                                     <action selector="submitRating:" destination="eP8-ZC-U4g" eventType="touchUpInside" id="5bw-gV-6qO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-Nv-ijx" customClass="RatingControl" customModule="ToolBelt" customModuleProvider="target">
-                                <rect key="frame" x="90" y="60" width="400" height="60"/>
+                                <rect key="frame" x="140" y="60" width="400" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-3C-rcp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-3C-rcp">
                                 <rect key="frame" x="267" y="550" width="66" height="30"/>
                                 <state key="normal" title="Flag User"/>
                                 <connections>
@@ -207,11 +207,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dzg-rK-Ogj" firstAttribute="top" secondItem="Ujp-3C-rcp" secondAttribute="bottom" constant="10" id="6kC-rU-4L3"/>
-                            <constraint firstItem="sOR-pd-lkF" firstAttribute="top" secondItem="RMC-Nv-ijx" secondAttribute="bottom" constant="12" id="Bq2-nJ-FBP"/>
-                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="top" secondItem="mDI-F4-CK2" secondAttribute="bottom" constant="20" id="KkH-Pq-SPF"/>
-                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="WTk-zU-lpY"/>
-                            <constraint firstItem="sOR-pd-lkF" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="Zso-xa-vhc"/>
+                            <constraint firstItem="Dzg-rK-Ogj" firstAttribute="top" secondItem="Ujp-3C-rcp" secondAttribute="bottom" constant="20" id="6kC-rU-4L3"/>
+                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="top" secondItem="mDI-F4-CK2" secondAttribute="bottom" constant="40" id="KkH-Pq-SPF"/>
+                            <constraint firstItem="RMC-Nv-ijx" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" constant="40" id="WTk-zU-lpY"/>
+                            <constraint firstItem="sOR-pd-lkF" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" constant="-9.5" id="Zso-xa-vhc"/>
                             <constraint firstItem="Ujp-3C-rcp" firstAttribute="centerX" secondItem="6ar-qU-XLB" secondAttribute="centerX" id="xTi-Km-sWq"/>
                         </constraints>
                     </view>
