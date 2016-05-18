@@ -16,6 +16,8 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     var userId: Int = 0
     
+    var tools = [Tool]()
+    
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var map: MKMapView!
@@ -25,6 +27,14 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             let destination = segue.destinationViewController as! ChatController
             destination.contact = userId
         }
+        if segue.identifier == "maptotable" {
+            
+            let destingation = segue.destinationViewController as! ToolTableViewController
+            destingation.tools = tools
+            
+        }
+        
+        
     }
     
     override func viewDidLoad() {
@@ -118,6 +128,9 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                     var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
                     self.map.setRegion(region, animated: true)
                     
+                    let myTool = Tool(title: "\(toolName!)", description: "\(toolDescription!)", ownerId: id!)
+                    
+                    self.tools += [myTool]
                     func annotate() {
                         
                         let annotation = MyAnnotation(identifier: id!, title: "\(toolName!)", subtitle: "\(toolDescription!)", coordinate: location)

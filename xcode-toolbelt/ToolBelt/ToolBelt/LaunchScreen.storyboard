@@ -21,7 +21,7 @@
                                 <rect key="frame" x="290" y="386" width="20" height="20"/>
                             </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ecl-Pw-jLR">
-                                <rect key="frame" x="180" y="236" width="240" height="90"/>
+                                <rect key="frame" x="180" y="296" width="240" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8wJ-VX-ucf"/>
                                 </constraints>
@@ -29,11 +29,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ecl-Pw-jLR" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="216" id="2kB-81-raS"/>
+                            <constraint firstItem="Ecl-Pw-jLR" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="276" id="2kB-81-raS"/>
                             <constraint firstItem="VCn-dR-2st" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SRP-MU-nOP"/>
                             <constraint firstItem="VCn-dR-2st" firstAttribute="top" secondItem="Ecl-Pw-jLR" secondAttribute="bottom" constant="60" id="duv-UK-RCJ"/>
                             <constraint firstItem="Ecl-Pw-jLR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kdJ-gq-YMc"/>
-                            <constraint firstItem="Ecl-Pw-jLR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-19" id="reb-MF-pbO"/>
+                            <constraint firstItem="Ecl-Pw-jLR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="11" id="reb-MF-pbO"/>
                         </constraints>
                     </view>
                 </viewController>
