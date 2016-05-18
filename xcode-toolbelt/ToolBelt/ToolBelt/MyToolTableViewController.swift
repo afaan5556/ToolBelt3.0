@@ -1,34 +1,20 @@
-//
-//  MyToolTableViewController.swift
-//  ToolBelt
-//
-//  Created by Afaan on 5/15/16.
-//  Copyright © 2016 teamToolBelt. All rights reserved.
-//
-
 import UIKit
 import Alamofire
-
 class MyToolTableViewController: UITableViewController {
-    
-    
     var mytools = [Tool]()
     
-        override func viewDidAppear(animated: Bool) {
-            super.viewDidAppear(true)
-            loadMyTools()
-    
-        }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        loadMyTools()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadMyTools()
         
         
     }
     
-
- 
     
     func loadMyTools() {
         
@@ -36,12 +22,13 @@ class MyToolTableViewController: UITableViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
+        
         Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/users/\(userid)/tools").responseJSON { response in
             if let JSON = response.result.value {
                 for var i = 0; i < JSON.count; i++ {
                     
                     let title = (JSON[i]["title"] as? String)!
-                    
+                    let distanceToTool = 0.0
                     var description: String
                     
                     if let des = JSON[i]["description"] as?  NSNull {
@@ -50,7 +37,7 @@ class MyToolTableViewController: UITableViewController {
                         description = (JSON[i]["description"] as? String)!
                     }
                     
-                    let myTool = Tool(title: title, description: description, ownerId: userid)
+                    let myTool = Tool(title: title, description: description, ownerId: userid, distance: distanceToTool)
                     
                     self.mytools += [myTool]
                     
@@ -60,11 +47,8 @@ class MyToolTableViewController: UITableViewController {
         }
     }
     
-
     
-
-
-     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
@@ -81,5 +65,4 @@ class MyToolTableViewController: UITableViewController {
         
         return cell
     }
-
 }
