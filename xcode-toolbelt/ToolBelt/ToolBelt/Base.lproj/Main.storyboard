@@ -30,7 +30,7 @@
                                     <segue destination="6Ms-72-aRc" kind="show" id="y4R-kg-a41"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpJ-vA-v3x">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpJ-vA-v3x">
                                 <rect key="frame" x="144" y="204" width="312" height="192"/>
                                 <state key="normal" image="Toolbelt_Logo_Search2"/>
                                 <connections>
@@ -438,19 +438,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tools5" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-Ls-nNq">
+                                <rect key="frame" x="-38" y="8" width="738" height="738"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Tool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1Y-fM-M8B">
-                                <rect key="frame" x="40" y="239" width="109" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="40" y="71" width="122" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZd-lm-dXY">
-                                <rect key="frame" x="40" y="354" width="520" height="30"/>
+                                <rect key="frame" x="40" y="186" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-a1-ia0">
-                                <rect key="frame" x="530" y="393" width="30" height="30"/>
+                                <rect key="frame" x="530" y="225" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addToolButton:" destination="rRd-iG-iaB" eventType="touchUpInside" id="pwq-cv-zrX"/>
@@ -458,7 +462,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-Er-o4j">
-                                <rect key="frame" x="40" y="285" width="520" height="30"/>
+                                <rect key="frame" x="40" y="117" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -469,9 +473,9 @@
                             <constraint firstItem="zZd-lm-dXY" firstAttribute="centerX" secondItem="SVD-nd-o42" secondAttribute="centerX" id="Iio-Il-2Rb"/>
                             <constraint firstItem="0nB-a1-ia0" firstAttribute="top" secondItem="zZd-lm-dXY" secondAttribute="bottom" constant="9" id="NWb-Ie-e5W"/>
                             <constraint firstItem="YM6-Er-o4j" firstAttribute="centerX" secondItem="SVD-nd-o42" secondAttribute="centerX" id="PC2-0S-4k2"/>
-                            <constraint firstItem="YM6-Er-o4j" firstAttribute="centerY" secondItem="SVD-nd-o42" secondAttribute="centerY" id="QuO-os-nwI"/>
+                            <constraint firstItem="YM6-Er-o4j" firstAttribute="centerY" secondItem="SVD-nd-o42" secondAttribute="centerY" constant="-168" id="QuO-os-nwI"/>
                             <constraint firstItem="zZd-lm-dXY" firstAttribute="leading" secondItem="V1Y-fM-M8B" secondAttribute="leading" id="SUV-nW-AgZ"/>
-                            <constraint firstItem="YM6-Er-o4j" firstAttribute="top" secondItem="V1Y-fM-M8B" secondAttribute="bottom" constant="18" id="T5X-Mk-0so"/>
+                            <constraint firstItem="YM6-Er-o4j" firstAttribute="top" secondItem="V1Y-fM-M8B" secondAttribute="bottom" constant="16" id="T5X-Mk-0so"/>
                             <constraint firstItem="zZd-lm-dXY" firstAttribute="leading" secondItem="SVD-nd-o42" secondAttribute="leadingMargin" constant="20" id="T8J-kK-9e1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zZd-lm-dXY" secondAttribute="trailing" constant="20" id="hYA-1M-e3y"/>
                             <constraint firstItem="YM6-Er-o4j" firstAttribute="leading" secondItem="V1Y-fM-M8B" secondAttribute="leading" id="jlB-tg-zyP"/>
@@ -893,11 +897,12 @@
         <image name="tools" width="1280" height="1039"/>
         <image name="tools1_" width="1280" height="853"/>
         <image name="tools2" width="1280" height="853"/>
+        <image name="tools5" width="1280" height="850"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zlO-Zm-2zO"/>
         <segue reference="DgL-Bt-cOo"/>
-        <segue reference="hff-YQ-jgU"/>
+        <segue reference="zlO-Zm-2zO"/>
+        <segue reference="ylT-OP-fSM"/>
         <segue reference="y4R-kg-a41"/>
     </inferredMetricsTieBreakers>
 </document>
