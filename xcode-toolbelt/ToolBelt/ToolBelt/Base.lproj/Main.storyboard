@@ -458,7 +458,7 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addToolButton:" destination="rRd-iG-iaB" eventType="touchUpInside" id="pwq-cv-zrX"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ylT-OP-fSM"/>
+                                    <segue destination="o2o-k7-4sf" kind="show" id="prg-KR-1g2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-Er-o4j">
@@ -876,7 +876,7 @@
                             <outlet property="delegate" destination="sLC-hU-IaW" id="oEm-G0-xZg"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="Hammer Filled-35" id="5ej-ty-JDb"/>
+                    <tabBarItem key="tabBarItem" title="My ToolBelt" image="Hammer Filled-35" id="5ej-ty-JDb"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My ToolBelt" id="MQN-fJ-XCr"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -900,9 +900,8 @@
         <image name="tools5" width="1280" height="850"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DgL-Bt-cOo"/>
-        <segue reference="zlO-Zm-2zO"/>
-        <segue reference="ylT-OP-fSM"/>
+        <segue reference="prg-KR-1g2"/>
         <segue reference="y4R-kg-a41"/>
+        <segue reference="DgL-Bt-cOo"/>
     </inferredMetricsTieBreakers>
 </document>
