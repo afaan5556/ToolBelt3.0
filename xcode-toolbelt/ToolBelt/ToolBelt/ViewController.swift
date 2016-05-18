@@ -29,7 +29,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let token = FBSDKAccessToken.currentAccessToken(){
             fetchProfile()
-            super.performSegueWithIdentifier("mainMenu", sender: self)
+            super.performSegueWithIdentifier("oauthtotabs", sender: self)
         }
         
         

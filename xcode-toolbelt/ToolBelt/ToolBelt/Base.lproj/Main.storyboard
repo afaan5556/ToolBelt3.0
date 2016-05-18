@@ -18,26 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuX-RV-TsJ">
-                                <rect key="frame" x="248" y="221" width="105" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="My ToolBelt"/>
-                                <connections>
-                                    <segue destination="sLC-hU-IaW" kind="show" id="dNE-lc-4VW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lju-cg-GTx">
                                 <rect key="frame" x="238" y="282" width="124" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="My Messages"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB5-hg-3S2">
-                                <rect key="frame" x="256" y="343" width="89" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="My Profile"/>
-                                <connections>
-                                    <segue destination="O9p-YE-epZ" kind="show" id="pRA-DM-M3v"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZA-g1-CbX">
                                 <rect key="frame" x="228" y="163" width="145" height="36"/>
@@ -64,22 +48,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lju-cg-GTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fd-Na-jXi"/>
-                            <constraint firstItem="EB5-hg-3S2" firstAttribute="top" secondItem="lju-cg-GTx" secondAttribute="bottom" constant="25" id="3hp-Cr-7XO"/>
-                            <constraint firstItem="dvO-p7-tK1" firstAttribute="centerX" secondItem="EB5-hg-3S2" secondAttribute="centerX" id="565-Ug-Myb"/>
-                            <constraint firstItem="uZA-g1-CbX" firstAttribute="centerX" secondItem="uuX-RV-TsJ" secondAttribute="centerX" id="7He-qI-ZHF"/>
-                            <constraint firstItem="lju-cg-GTx" firstAttribute="top" secondItem="uuX-RV-TsJ" secondAttribute="bottom" constant="25" id="OfS-15-brJ"/>
-                            <constraint firstItem="uuX-RV-TsJ" firstAttribute="top" secondItem="uZA-g1-CbX" secondAttribute="bottom" constant="22" id="W2R-N7-F8Y"/>
-                            <constraint firstItem="EB5-hg-3S2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acy-66-euI"/>
+                            <constraint firstItem="lju-cg-GTx" firstAttribute="top" secondItem="uZA-g1-CbX" secondAttribute="bottom" constant="83" id="QV0-lR-Nbj"/>
+                            <constraint firstItem="dvO-p7-tK1" firstAttribute="centerX" secondItem="uZA-g1-CbX" secondAttribute="centerX" id="WFR-4E-qra"/>
                             <constraint firstItem="lju-cg-GTx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bY4-gm-JIb"/>
-                            <constraint firstItem="uuX-RV-TsJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cyy-hf-GHh"/>
-                            <constraint firstItem="dvO-p7-tK1" firstAttribute="top" secondItem="EB5-hg-3S2" secondAttribute="bottom" constant="21" id="io1-gv-1Sq"/>
+                            <constraint firstItem="dvO-p7-tK1" firstAttribute="centerX" secondItem="lju-cg-GTx" secondAttribute="centerX" id="gMN-bw-S2X"/>
+                            <constraint firstItem="dvO-p7-tK1" firstAttribute="top" secondItem="lju-cg-GTx" secondAttribute="bottom" constant="82" id="wPj-yU-xgz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="Home-50" selectedImage="Home-50" id="gcC-8a-Y9h"/>
                     <navigationItem key="navigationItem" title="Home" id="svR-3m-ywO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myMessages" destination="lju-cg-GTx" id="lQu-rk-Pko"/>
-                        <outlet property="myProfile" destination="EB5-hg-3S2" id="1hu-GA-vK1"/>
-                        <outlet property="myToolBelt" destination="uuX-RV-TsJ" id="9yX-jz-vEE"/>
                         <outlet property="searchDisplayController" destination="vQ0-Of-hKj" id="b9p-75-kwu"/>
                     </connections>
                 </viewController>
@@ -93,7 +73,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1288" y="504"/>
+            <point key="canvasLocation" x="1034" y="-496"/>
         </scene>
         <!--Contact User-->
         <scene sceneID="7Oh-B3-Uv7">
@@ -119,7 +99,7 @@
                                     <action selector="sendMessageButton:" destination="QIX-6Q-sUm" eventType="touchUpInside" id="Igh-pg-YyH"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-oE-Zou">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-oE-Zou">
                                 <rect key="frame" x="10" y="84" width="580" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -166,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fke-K0-ffJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756" y="-271"/>
+            <point key="canvasLocation" x="1794" y="1249"/>
         </scene>
         <!--Flag User-->
         <scene sceneID="rtv-dD-9ZY">
@@ -247,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16k-HH-8Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4252" y="485"/>
+            <point key="canvasLocation" x="2718" y="1099"/>
         </scene>
         <!--Tool Search Results-->
         <scene sceneID="kzW-DC-GDp">
@@ -309,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QtO-73-8Cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="485"/>
+            <point key="canvasLocation" x="1810" y="283"/>
         </scene>
         <!--New Add Edit Address Controller-->
         <scene sceneID="A2U-oc-zgE">
@@ -404,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB0-Ql-wmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2123" y="1279"/>
+            <point key="canvasLocation" x="2498" y="-1400"/>
         </scene>
         <!--Add Tool-->
         <scene sceneID="94W-Ga-KGS">
@@ -482,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu5-fh-Tg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="1360"/>
+            <point key="canvasLocation" x="2506" y="-511"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="CBz-Ms-JkB">
@@ -631,6 +611,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="Gender Neutral User-50" selectedImage="Gender Neutral User-50" id="hrx-xo-G0l"/>
                     <navigationItem key="navigationItem" id="iby-wD-cNt"/>
                     <connections>
                         <outlet property="city" destination="oW4-fZ-zVD" id="Y5e-Sh-nLc"/>
@@ -643,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfJ-em-9Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="1329"/>
+            <point key="canvasLocation" x="1788" y="-1400"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Luo-pD-JnN">
@@ -660,12 +641,31 @@
                     </view>
                     <navigationItem key="navigationItem" id="H2A-YZ-3Lh"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainMenu" id="s72-X5-b9H"/>
+                        <segue destination="o2o-k7-4sf" kind="show" identifier="oauthtotabs" id="P6t-N4-2Ss"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Eb-gy-Uqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="-299"/>
+            <point key="canvasLocation" x="256" y="-511"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="e4c-m5-vVj">
+            <objects>
+                <tabBarController id="o2o-k7-4sf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bGw-g3-NZr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Hco-V5-LKG"/>
+                        <segue destination="sLC-hU-IaW" kind="relationship" relationship="viewControllers" id="KoH-wU-ghV"/>
+                        <segue destination="O9p-YE-epZ" kind="relationship" relationship="viewControllers" id="jd6-M8-Oqv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jq-zd-Z6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="-1400"/>
         </scene>
         <!--Tool Map View Controller-->
         <scene sceneID="8yx-1Y-idP">
@@ -679,7 +679,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-jh-WPL">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                             <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2Q-i0-dvF">
@@ -721,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUv-aM-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="-289"/>
+            <point key="canvasLocation" x="1058" y="283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qa3-cX-dl7">
@@ -739,7 +739,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoe-MK-Xj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="-291"/>
+            <point key="canvasLocation" x="302" y="-1408"/>
         </scene>
         <!--My ToolBelt-->
         <scene sceneID="oMd-f2-xGM">
@@ -792,6 +792,7 @@
                             <outlet property="delegate" destination="sLC-hU-IaW" id="oEm-G0-xZg"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="Hammer-50" selectedImage="Hammer-50" id="fhH-WT-GYz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My ToolBelt" id="MQN-fJ-XCr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pFe-YL-arg">
@@ -800,41 +801,26 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45p-yB-Ykd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="513"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="auN-ZE-FWU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GHa-fH-D1o" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jFJ-8u-Heg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="QIX-6Q-sUm" kind="relationship" relationship="rootViewController" id="yb2-F9-T4N"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I6W-M3-g7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2827" y="513"/>
+            <point key="canvasLocation" x="1810" y="-511"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Gender Neutral User-50" width="50" height="50"/>
+        <image name="Hammer-50" width="50" height="50"/>
+        <image name="Home-50" width="50" height="50"/>
         <image name="drill" width="512" height="512"/>
         <image name="saw" width="200" height="200"/>
         <image name="tools1" width="1280" height="853"/>
         <image name="tools3.png" width="1280" height="1039"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pRA-DM-M3v"/>
         <segue reference="y4R-kg-a41"/>
-        <segue reference="dNE-lc-4VW"/>
-        <segue reference="yzf-Ce-SlC"/>
+        <segue reference="jIz-To-nwW"/>
+        <segue reference="Ytl-8l-T9v"/>
+        <segue reference="sFT-Sg-Lj9"/>
     </inferredMetricsTieBreakers>
 </document>
