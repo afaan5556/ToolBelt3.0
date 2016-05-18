@@ -303,7 +303,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools1" translatesAutoresizingMaskIntoConstraints="NO" id="gae-om-kK1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools1_" translatesAutoresizingMaskIntoConstraints="NO" id="gae-om-kK1">
                                 <rect key="frame" x="-62" y="-44" width="1280" height="853"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street 2:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceS-dq-a3Q">
@@ -323,19 +323,16 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add/Edit Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-bT-o3P">
                                 <rect key="frame" x="40" y="152" width="178" height="28"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRo-aV-43D">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRo-aV-43D">
                                 <rect key="frame" x="490" y="375" width="70" height="34"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add/Edit"/>
                                 <connections>
                                     <action selector="addEditAddressButton:" destination="FGb-S2-b7Y" eventType="touchUpInside" id="iLU-UK-hya"/>
-                                    <segue destination="O9p-YE-epZ" kind="show" id="jIz-To-nwW"/>
+                                    <segue destination="o2o-k7-4sf" kind="show" id="7Xv-tv-Y1i"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-s3-gb4">
@@ -476,8 +473,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tools3.png" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-Ao-ZMo">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tools_" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-Ao-ZMo">
+                                <rect key="frame" x="-93" y="0.0" width="693" height="693"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygQ-GO-0wB">
                                 <rect key="frame" x="20" y="184" width="88" height="21"/>
@@ -817,12 +814,12 @@
         <image name="Home-50" width="50" height="50"/>
         <image name="drill" width="512" height="512"/>
         <image name="saw" width="200" height="200"/>
-        <image name="tools1" width="1280" height="853"/>
-        <image name="tools3.png" width="1280" height="1039"/>
+        <image name="tools1_" width="1280" height="853"/>
+        <image name="tools_" width="1280" height="1039"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="y4R-kg-a41"/>
-        <segue reference="jIz-To-nwW"/>
+        <segue reference="7Xv-tv-Y1i"/>
         <segue reference="Ytl-8l-T9v"/>
         <segue reference="sFT-Sg-Lj9"/>
     </inferredMetricsTieBreakers>
