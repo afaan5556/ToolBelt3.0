@@ -1,9 +1,3 @@
-//
-//  Map.swift
-//  ToolBelt
-//
-//  Created by Peter Kang on 5/14/16.
-//  Copyright © 2016 teamToolBelt. All rights reserved.
 import Alamofire
 import MapKit
 class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
@@ -92,6 +86,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func searchBarSearchButtonClicked( searchbar: UISearchBar) {
         searchbar.resignFirstResponder()
+        tools = []
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
@@ -100,17 +95,18 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         print(searchTerm)
         
-        Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/tools/search", parameters: ["keyword": searchTerm, "latitude": currentLat, "longitude": currentLong]) .responseJSON {response in
+        Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/tools/search", parameters: ["keyword": searchTerm, "latitude": currentLat, "longitude": currentLong, "user": userid]) .responseJSON {response in
             if let JSON = response.result.value {
                 print("\(JSON)")
                 
                 
                 for var i = 0; i < JSON.count; i++ {
                     
+                    let distanceToTool = JSON[i].objectForKey("distance") as! Double
+                    
                     let owner = JSON[i].objectForKey("owner")
                     let tool = JSON[i].objectForKey("tool")
                     let id = tool!["user_id"] as? Int!
-                    print(id)
                     let toolName = tool!["title"]!
                     let toolDescription = tool!["description"]!
                     var lat = owner!["latitude"]?!.doubleValue
@@ -128,7 +124,7 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                     var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
                     self.map.setRegion(region, animated: true)
                     
-                    let myTool = Tool(title: "\(toolName!)", description: "\(toolDescription!)", ownerId: id!)
+                    let myTool = Tool(title: "\(toolName!)", description: "\(toolDescription!)", ownerId: id!, distance: distanceToTool)
                     
                     self.tools += [myTool]
                     func annotate() {
