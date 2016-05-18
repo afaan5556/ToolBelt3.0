@@ -10,7 +10,8 @@ import UIKit
 import Alamofire
 
 class MyToolTableViewController: UITableViewController {
-
+    
+    
     var mytools = [Tool]()
     
         override func viewDidAppear(animated: Bool) {
@@ -30,6 +31,9 @@ class MyToolTableViewController: UITableViewController {
  
     
     func loadMyTools() {
+        
+        self.mytools = []
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         let userid: Int = defaults.objectForKey("toolBeltUserID") as! Int
         Alamofire.request(.GET, "http://afternoon-bayou-17340.herokuapp.com/users/\(userid)/tools").responseJSON { response in
