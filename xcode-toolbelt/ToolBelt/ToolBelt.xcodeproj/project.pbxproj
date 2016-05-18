@@ -17,6 +17,8 @@
 		09A1BD571CE96C7100A4387F /* newAddEditAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */; };
 		09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A37FDE1CE977AF00A233D9 /* MyToolsTableViewCell.swift */; };
 		09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A37FE01CE9795300A233D9 /* MyToolTableViewController.swift */; };
+		09BA78FB1CEC3D57003FD426 /* MyMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA78FA1CEC3D57003FD426 /* MyMessagesController.swift */; };
+		09BA78FD1CEC3D84003FD426 /* MyMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA78FC1CEC3D84003FD426 /* MyMessageCell.swift */; };
 		09D1BD851CE9402C0044BB94 /* ToolMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */; };
 		09D55A0C1CE7B81500EEE324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A0B1CE7B81500EEE324 /* AppDelegate.swift */; };
 		09D55A0E1CE7B81500EEE324 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D55A0D1CE7B81500EEE324 /* HomeController.swift */; };
@@ -60,6 +62,8 @@
 		09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newAddEditAddressViewController.swift; sourceTree = "<group>"; };
 		09A37FDE1CE977AF00A233D9 /* MyToolsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolsTableViewCell.swift; sourceTree = "<group>"; };
 		09A37FE01CE9795300A233D9 /* MyToolTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolTableViewController.swift; sourceTree = "<group>"; };
+		09BA78FA1CEC3D57003FD426 /* MyMessagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMessagesController.swift; sourceTree = "<group>"; };
+		09BA78FC1CEC3D84003FD426 /* MyMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMessageCell.swift; sourceTree = "<group>"; };
 		09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolMapViewController.swift; sourceTree = "<group>"; };
 		09D55A081CE7B81500EEE324 /* ToolBelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolBelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D55A0B1CE7B81500EEE324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				09D55A0F1CE7B81500EEE324 /* Main.storyboard */,
 				099BE8871CEB9EC300DED842 /* LaunchScreen.storyboard */,
 				09E523441CEA83A100000440 /* ChatController.swift */,
+				09BA78FA1CEC3D57003FD426 /* MyMessagesController.swift */,
+				09BA78FC1CEC3D84003FD426 /* MyMessageCell.swift */,
 				09A1BD561CE96C7100A4387F /* newAddEditAddressViewController.swift */,
 				0942B94E1CE95B92003EEA78 /* testViewController.swift */,
 				09D1BD841CE9402C0044BB94 /* ToolMapViewController.swift */,
@@ -389,9 +395,11 @@
 				09D55A0C1CE7B81500EEE324 /* AppDelegate.swift in Sources */,
 				0983C2DE1CE9044B009D8011 /* ToolTableViewController.swift in Sources */,
 				0983C2DA1CE8FE03009D8011 /* Tool.swift in Sources */,
+				09BA78FB1CEC3D57003FD426 /* MyMessagesController.swift in Sources */,
 				097B251E1CEAAF1100B8E559 /* FlagUserController.swift in Sources */,
 				0983C2D81CE8FA48009D8011 /* AddToolController.swift in Sources */,
 				09D1BD851CE9402C0044BB94 /* ToolMapViewController.swift in Sources */,
+				09BA78FD1CEC3D84003FD426 /* MyMessageCell.swift in Sources */,
 				09E523451CEA83A100000440 /* ChatController.swift in Sources */,
 				09A37FE11CE9795300A233D9 /* MyToolTableViewController.swift in Sources */,
 				09A37FDF1CE977AF00A233D9 /* MyToolsTableViewCell.swift in Sources */,

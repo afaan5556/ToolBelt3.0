@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Flag User"/>
                                 <connections>
-                                    <segue destination="YR9-bL-2Pu" kind="show" id="8hT-0J-WVW"/>
+                                    <segue destination="YR9-bL-2Pu" kind="show" identifier="flagUserSegue" id="8hT-0J-WVW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,36 +645,6 @@
             </objects>
             <point key="canvasLocation" x="324" y="-1400"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="yK1-pl-7H8">
-            <objects>
-                <tableViewController id="zOB-30-H1e" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1kb-Lh-HxR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6f8-1N-Bfv">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6f8-1N-Bfv" id="5HH-fY-gAi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zOB-30-H1e" id="Zq3-6y-SPr"/>
-                            <outlet property="delegate" destination="zOB-30-H1e" id="lvk-jP-psR"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="Message Filled-35" id="4XD-uv-qQ1"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yBp-q3-e7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="252" y="-496"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e4c-m5-vVj">
             <objects>
@@ -688,7 +658,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hff-YQ-jgU"/>
                         <segue destination="O9p-YE-epZ" kind="relationship" relationship="viewControllers" id="ZaU-IB-gsz"/>
                         <segue destination="sLC-hU-IaW" kind="relationship" relationship="viewControllers" id="SaC-HB-Mt2"/>
-                        <segue destination="zOB-30-H1e" kind="relationship" relationship="viewControllers" id="jhI-Zm-Zcf"/>
+                        <segue destination="AZg-Eo-an4" kind="relationship" relationship="viewControllers" id="3Fi-vj-E0F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jq-zd-Z6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -750,6 +720,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUv-aM-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="283"/>
+        </scene>
+        <!--My Messages Controller-->
+        <scene sceneID="jop-Uc-Nvj">
+            <objects>
+                <tableViewController id="AZg-Eo-an4" customClass="MyMessagesController" customModule="ToolBelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="My6-Bz-gPB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyMessageCell" id="fya-sd-NOP" customClass="MyMessageCell" customModule="ToolBelt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fya-sd-NOP" id="az4-Ht-p05">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdx-4v-9q8">
+                                            <rect key="frame" x="8" y="8" width="584" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MyMessageCorrespondentLabel" destination="Sdx-4v-9q8" id="suJ-TD-lgw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AZg-Eo-an4" id="kEI-DU-5uZ"/>
+                            <outlet property="delegate" destination="AZg-Eo-an4" id="dJB-8z-Dy9"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="Message Filled-35" id="gFA-xY-4lq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="QIX-6Q-sUm" kind="show" identifier="viewMessageSegue" id="DgL-Bt-cOo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sX-5M-t5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qa3-cX-dl7">
@@ -842,9 +856,9 @@
         <image name="tools2-1" width="1280" height="853"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yzf-Ce-SlC"/>
         <segue reference="hdd-0R-DTl"/>
+        <segue reference="SaC-HB-Mt2"/>
         <segue reference="y4R-kg-a41"/>
-        <segue reference="sFT-Sg-Lj9"/>
+        <segue reference="DgL-Bt-cOo"/>
     </inferredMetricsTieBreakers>
 </document>
