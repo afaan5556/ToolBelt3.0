@@ -46,6 +46,10 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
     }
     
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error.localizedDescription)
+    }
+    
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annotation = annotationView.annotation as! MyAnnotation
         if control == annotationView.rightCalloutAccessoryView {
