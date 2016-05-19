@@ -28,21 +28,22 @@ Using the app users will be able to:
 
 
 ## Page List
-* 0.0 Launch
-* 0.1 Login (OAUTH)
-* 1.0 Home page
-* 1.1 Add street address
-* 2.1 Tool results - list view
-* 2.2 Tool results - map view
-* 2.3 & 3.2 Chat page
-* 2.4 Flag user
-* 3.1 My ToolBelt
-* 3.2 Add tool
-* 3.3 My messages
-* 3.4 My account
-* 3.4 Edit address
-Rate user
+* Launch
+* Login (OAUTH)
+* Home page
 
+* Tool search - list view
+* Tool search - map view
 
+* My ToolBelt
+* Add a tool
+
+* My messages
+* Chat page
+* Rate user
+* Flag user
+
+* My account
+* Edit address
 
 
