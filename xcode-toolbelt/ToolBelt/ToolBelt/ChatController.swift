@@ -9,7 +9,9 @@ class ChatController: UIViewController {
     @IBOutlet var textField: UITextField!
 
     
-    @IBOutlet weak var chatName: UILabel!
+    @IBOutlet var chatName: UILabel!
+    
+    @IBOutlet var ratingLabel: UILabel!
     
     var contact = Int()
     var name = String()
@@ -28,6 +30,8 @@ class ChatController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chatWindow.editable = false
         
         
         
@@ -50,7 +54,10 @@ class ChatController: UIViewController {
                         print("\(JSON)")
                         print("hey")
                         var firstName = (JSON["first_name"] as? String)!
-                        self.chatName.text = ("Contact \(firstName)")
+                        let rating = JSON["rating"] as! Int
+                        print(rating)
+                        self.chatName.text = "Contact \(firstName)"
+                        self.ratingLabel.text = "\(rating)"
                     }
                 }
                 
