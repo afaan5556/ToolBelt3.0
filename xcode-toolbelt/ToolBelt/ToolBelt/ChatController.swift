@@ -8,6 +8,9 @@ class ChatController: UIViewController {
     
     @IBOutlet var textField: UITextField!
 
+    @IBOutlet var rateUserButton: UIButton!
+    
+    @IBOutlet var sendButton: UIButton!
     
     @IBOutlet var chatName: UILabel!
     
@@ -32,6 +35,9 @@ class ChatController: UIViewController {
         super.viewDidLoad()
         
         chatWindow.editable = false
+        chatWindow.layer.cornerRadius = 5
+        sendButton.layer.cornerRadius = 5
+        rateUserButton.layer.cornerRadius = 5
         
         
         
