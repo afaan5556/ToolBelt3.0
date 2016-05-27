@@ -4,8 +4,8 @@ class ToolMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     
     let locationManager = CLLocationManager()
-    var currentLat: CLLocationDegrees = 0.0
-    var currentLong: CLLocationDegrees = 0.0
+    var currentLat: CLLocationDegrees = 37.784517
+    var currentLong: CLLocationDegrees = -122.397194
     
     
     var userId: Int = 0
